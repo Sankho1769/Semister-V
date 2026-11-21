@@ -1,0 +1,4 @@
+.chrome_temp/
+screenshots/
+__pycache__/
+*.pyc

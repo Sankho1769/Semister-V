@@ -1,0 +1,3 @@
+{
+  "code_architecture": "<?php\necho 'Hello World';\n?>"
+}

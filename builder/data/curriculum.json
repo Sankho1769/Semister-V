@@ -1,0 +1,506 @@
+{
+  "university": {
+    "name": "Maulana Abul Kalam Azad University of Technology, West Bengal",
+    "former_name": "West Bengal University of Technology (WBUT)",
+    "syllabus_for": "Syllabus of BCA & MIM",
+    "effective_session": "Effective from 2023-24 Academic Sessions",
+    "semester": "SEMESTER: V",
+    "credit_definitions": [
+      {
+        "activity": "Lecture",
+        "rule": "1 HR LECTURE PER WEEK = 1 CREDIT"
+      },
+      {
+        "activity": "Tutorial",
+        "rule": "1 HR TUTORIAL PER WEEK = 1 CREDIT"
+      },
+      {
+        "activity": "Practical",
+        "rule": "2 HR PRACTICAL PER WEEK = 1 CREDIT"
+      }
+    ],
+    "subject_numbering_scheme": {
+      "dept_code": "C",
+      "subject_type": "CORE MAJOR",
+      "sem": "V",
+      "format": "Code for Dept Offering Subject + Subject Type + Semester + Subject Code"
+    }
+  },
+  "subjects": [
+    {
+      "id": "bcac501",
+      "code": "BCAC501",
+      "name": "PHP WITH MYSQL",
+      "type": "Theory & Practical Lab",
+      "category": "Core Major (C)",
+      "credit": "5 (3L + 2P)",
+      "credits_numeric": 5,
+      "lecture_hours": 45,
+      "internal_exam_hours": 3,
+      "total_hours": 48,
+      "total_marks": 100,
+      "theory_marks": 70,
+      "internal_marks": 30,
+      "practical_code": "BCAC591",
+      "practical_name": "PHP WITH MYSQL LAB",
+      "practical_credit": 2,
+      "objective": "The primary objective of the PHP with MySQL course is to equip students with the knowledge and skills necessary to design and develop dynamic, data-driven web applications. Through this course, students will learn the fundamentals of server-side scripting using PHP, understand how to interact with MySQL databases for data storage and retrieval, and apply best practices in web development, including security, error handling, and efficient coding techniques. By the end of the course, students will be able to create fully functional web applications that are secure, scalable, and maintainable, preparing them for further studies or entry-level roles in web development.",
+      "outcomes": [
+        {
+          "co": "CO1",
+          "text": "Understand the fundamentals of web development, PHP syntax, and MySQL database management."
+        },
+        {
+          "co": "CO2",
+          "text": "Develop dynamic web pages using PHP by incorporating server-side scripting and user input handling."
+        },
+        {
+          "co": "CO3",
+          "text": "Implement database-driven web applications by integrating PHP with MySQL to perform CRUD operations with proper session management and Error handling."
+        },
+        {
+          "co": "CO4",
+          "text": "Demonstrate knowledge of advanced PHP concepts such as OOP, security measures, and API integration."
+        },
+        {
+          "co": "CO5",
+          "text": "Design, develop, and deploy a web project using the PHP framework."
+        }
+      ],
+      "module_count": 8,
+      "modules_meta": [
+        {
+          "module_no": 1,
+          "title": "Introduction to Web Development & Setting up Environment",
+          "hours": 4,
+          "marks": 5
+        },
+        {
+          "module_no": 2,
+          "title": "PHP Basics, Functions, Arrays and Strings",
+          "hours": 8,
+          "marks": 10
+        },
+        {
+          "module_no": 3,
+          "title": "Forms Handling and User Input",
+          "hours": 4,
+          "marks": 5
+        },
+        {
+          "module_no": 4,
+          "title": "PHP and MySQL Integration",
+          "hours": 6,
+          "marks": 10
+        },
+        {
+          "module_no": 5,
+          "title": "Session Management, Authentication, File Handling & Security",
+          "hours": 4,
+          "marks": 15
+        },
+        {
+          "module_no": 6,
+          "title": "Advanced PHP Concepts (OOP)",
+          "hours": 5,
+          "marks": 5
+        },
+        {
+          "module_no": 7,
+          "title": "Introduction to PHP Frameworks",
+          "hours": 6,
+          "marks": 10
+        },
+        {
+          "module_no": 8,
+          "title": "Laravel FrameWork",
+          "hours": 8,
+          "marks": 10
+        }
+      ],
+      "books": [
+        "Gilmore, W. J. (2010). Beginning PHP and MySQL: From Novice to Professional (4th ed.). Apress.",
+        "Naramore, E., Gerner, J., Scouarnec, Y. L., Stolz, J., & Glass, M. (2005). Beginning PHP5, Apache, and MySQL Web Development. Wiley India Pvt. Ltd.",
+        "Welling, L., & Thomson, L. (2009). PHP and MySQL Web Development (4th ed.). Pearson Education.",
+        "Beighley, L., & Morrison, M. (2008). Head First PHP & MySQL. O'Reilly Media.",
+        "Powers, D., & McGrath, M. (2015). PHP & MySQL in Easy Steps. McGraw Hill Education.",
+        "Robson, E., & Freeman, E. (2007). Head First PHP & MySQL. O'Reilly Media.",
+        "Gosselin, D., Kokoska, R., & Easterbrooks, P. (2010). PHP Programming with MySQL: The Web Technologies Series (2nd ed.). Cengage Learning.",
+        "Sharma, V. (2017). PHP with MySQL: A Practical Approach. BPB Publications.",
+        "Narayan, N. (2016). PHP & MySQL: Server-side Web Development. McGraw Hill Education.",
+        "Zandstra, M. (2014). PHP Objects, Patterns, and Practice (4th ed.). Apress."
+      ]
+    },
+    {
+      "id": "bcac502",
+      "code": "BCAC502",
+      "name": "Object Oriented Programming with Java",
+      "type": "Theory & Practical Lab",
+      "category": "Core Major (C)",
+      "credit": "5 (3L + 2P)",
+      "credits_numeric": 5,
+      "lecture_hours": 45,
+      "internal_exam_hours": 3,
+      "total_hours": 48,
+      "total_marks": 100,
+      "theory_marks": 70,
+      "internal_marks": 30,
+      "practical_code": "BCAC592",
+      "practical_name": "Object Oriented Programming with Java Lab",
+      "practical_credit": 2,
+      "objective": "The primary objective of the Object-Oriented Programming (OOP) with Java course is to provide students with a comprehensive understanding of object-oriented programming principles and their application using Java. The course aims to equip students with the skills needed to design, develop, and maintain robust and scalable software systems. By covering fundamental OOP concepts such as classes, objects, inheritance, polymorphism, and encapsulation, as well as advanced topics like interfaces, abstract classes, and design patterns, students will learn to write efficient, maintainable, and reusable code. The course will also emphasize best practices in Java programming, problem-solving techniques, and real-world application development, preparing students for careers in software development or further studies in computer science.",
+      "outcomes": [
+        {
+          "co": "CO1",
+          "text": "Understand and apply the fundamental concepts of Java programming, including data types, operators, control structures, and basic syntax, to develop simple applications."
+        },
+        {
+          "co": "CO2",
+          "text": "Demonstrate proficiency in object-oriented programming principles such as classes, objects, inheritance, polymorphism, encapsulation, and abstraction, to design and implement robust software solutions."
+        },
+        {
+          "co": "CO3",
+          "text": "Implement interfaces and abstract classes to create flexible and reusable code, enabling the development of modular and maintainable applications."
+        },
+        {
+          "co": "CO4",
+          "text": "Handle exceptions and errors in Java programs using try-catch blocks, custom exceptions, and other exception-handling mechanisms to ensure the reliability and robustness of software."
+        },
+        {
+          "co": "CO5",
+          "text": "Perform file I/O operations and implement serialization in Java to persist data, enabling the storage and retrieval of information across different sessions."
+        },
+        {
+          "co": "CO6",
+          "text": "Understand and implement multithreading in Java to develop applications that perform multiple tasks concurrently, improving performance and responsiveness."
+        }
+      ],
+      "module_count": 9,
+      "modules_meta": [
+        {
+          "module_no": 1,
+          "title": "Introduction to Java & JVM Architecture",
+          "hours": 2,
+          "marks": 5
+        },
+        {
+          "module_no": 2,
+          "title": "Basics of Java Programming",
+          "hours": 8,
+          "marks": 10
+        },
+        {
+          "module_no": 3,
+          "title": "Object-Oriented Programming Concepts",
+          "hours": 6,
+          "marks": 8
+        },
+        {
+          "module_no": 4,
+          "title": "Inheritance and Polymorphism",
+          "hours": 6,
+          "marks": 10
+        },
+        {
+          "module_no": 5,
+          "title": "Arrays and Strings",
+          "hours": 6,
+          "marks": 8
+        },
+        {
+          "module_no": 6,
+          "title": "Interfaces and Abstract Classes",
+          "hours": 4,
+          "marks": 7
+        },
+        {
+          "module_no": 7,
+          "title": "Exception Handling",
+          "hours": 4,
+          "marks": 8
+        },
+        {
+          "module_no": 8,
+          "title": "File I/O and Serialization",
+          "hours": 5,
+          "marks": 6
+        },
+        {
+          "module_no": 9,
+          "title": "Multithreading",
+          "hours": 4,
+          "marks": 8
+        }
+      ],
+      "books": [
+        "Schildt, H. (2018). Java: The Complete Reference (11th ed.). McGraw Hill Education.",
+        "Horstmann, C. S., & Cornell, G. (2019). Core Java Volume I \u2013 Fundamentals (11th ed.). Pearson Education.",
+        "Balagurusamy, E. (2020). Object-Oriented Programming with Java (7th ed.). McGraw Hill Education.",
+        "Sierra, K., & Bates, B. (2005). Head First Java (2nd ed.). O'Reilly Media.",
+        "Deitel, P., & Deitel, H. (2018). Java: How to Program (11th ed.). Pearson Education.",
+        "Liang, Y. D. (2018). Introduction to Java Programming and Data Structures (11th ed.). Pearson Education.",
+        "Halterman, R. L. (2005). Object-Oriented Programming in Java. WCB/McGraw Hill.",
+        "Tanweer Alam (2021). Core JAVA. Khanna Publishing House.",
+        "Tanweer Alam (2020). Object Oriented Systems with Java 2.0. Khanna Publishing House.",
+        "Arunesh Goyal (2020). The Essentials of Java. Khanna Publishing House."
+      ]
+    },
+    {
+      "id": "mim502",
+      "code": "MIM 502",
+      "name": "Entrepreneurship",
+      "type": "Theory",
+      "category": "Management",
+      "credit": "4",
+      "credits_numeric": 4,
+      "mode": "Offline",
+      "theory_hours": 40,
+      "tutorial_hours": 8,
+      "total_hours": 48,
+      "total_marks": 100,
+      "objective": "The aim of a course in entrepreneurship typically focuses on equipping students with the knowledge, skills, and mind set necessary to start, manage, and grow their own business ventures. The course objectives are to equip students with the knowledge and skills necessary to identify and evaluate business opportunities, develop comprehensive business plans, and understand the financial, legal, and ethical aspects of launching and managing a startup. Students will enhance their innovation, creativity, and leadership abilities, while also learning effective marketing, communication, and risk management strategies.",
+      "outcomes": [
+        {
+          "co": "CO1",
+          "text": "Students will be able to create a comprehensive and viable business plan, incorporating market research, financial projections, and operational strategies, demonstrating their readiness to launch a new venture."
+        },
+        {
+          "co": "CO2",
+          "text": "Student will demonstrate the ability to identify, evaluate, and select profitable business opportunities, using analytical tools and techniques to assess market needs and potential risks."
+        },
+        {
+          "co": "CO3",
+          "text": "Students will acquire the skills to manage the financial aspects of a startup, including budgeting, fundraising, cash flow management, and financial statement analysis, ensuring the financial sustainability of their venture."
+        },
+        {
+          "co": "CO4",
+          "text": "Students will showcase their ability to apply innovative thinking and problem-solving skills to overcome challenges in the entrepreneurial process, developing unique solutions that add value to their business."
+        },
+        {
+          "co": "CO5",
+          "text": "Students will be able to make informed and ethical business decisions, considering legal implications, social responsibility, and long-term strategic goals in the management of their entrepreneurial ventures."
+        }
+      ],
+      "module_count": 5,
+      "modules_meta": [
+        {
+          "module_no": 1,
+          "title": "Introduction to Entrepreneurship",
+          "hours": 10,
+          "weightage": "30%",
+          "bloom": "1, 2"
+        },
+        {
+          "module_no": 2,
+          "title": "Introduction to entrepreneur",
+          "hours": 6,
+          "weightage": "20%",
+          "bloom": "1, 2, 3"
+        },
+        {
+          "module_no": 3,
+          "title": "Entrepreneurial Motivation",
+          "hours": 7,
+          "weightage": "10%",
+          "bloom": "1, 2, 3"
+        },
+        {
+          "module_no": 4,
+          "title": "Project Management",
+          "hours": 7,
+          "weightage": "20%",
+          "bloom": "1, 2, 3"
+        },
+        {
+          "module_no": 5,
+          "title": "Organisation Assistance",
+          "hours": 10,
+          "weightage": "20%",
+          "bloom": "2, 3"
+        }
+      ],
+      "books": [
+        "Entrepreneurship \u2013 Anindita Sarkar \u2013 Taurean Publications",
+        "Entrepreneurship Development and Project Management \u2013 Dr. Dilip M. Sarwate \u2013 Everest Publishing House"
+      ]
+    },
+    {
+      "id": "mim501",
+      "code": "MIM501",
+      "name": "FINANCIAL MANAGEMENT",
+      "type": "Theory",
+      "category": "Management",
+      "credit": "4",
+      "credits_numeric": 4,
+      "mode": "Offline",
+      "theory_hours": 40,
+      "tutorial_hours": 8,
+      "total_hours": 48,
+      "total_marks": 100,
+      "objective": "The objective is to attain a comprehensive understanding of the basics of Financial Management and its application. Students study how financial allocation is done and understand the tools of finance departments and functions in a complex environment. Students understand effects of Financial management in decision-making and efficiency, covering investment, financing, and dividend decisions, capital budgeting, leverage analysis, working capital, and corporate valuation.",
+      "outcomes": [
+        {
+          "co": "CO1",
+          "text": "This course equips students with foundational knowledge in Financial Management and cost of capital determination."
+        },
+        {
+          "co": "CO2",
+          "text": "Through this course, students will know the fundamentals of a Financial plan and corporate final accounts analysis."
+        },
+        {
+          "co": "CO3",
+          "text": "The course will facilitate active learning and acquiring knowledge regarding capital budgeting and emerging financial management trends."
+        },
+        {
+          "co": "CO4",
+          "text": "The course is designed to furnish students with decision-making skills relevant to leverage, risk appraisal, and capital structure."
+        },
+        {
+          "co": "CO5",
+          "text": "Upon completing this course, students will be equipped to find solutions to Financial challenges and explore possibilities in practical settings."
+        }
+      ],
+      "module_count": 7,
+      "modules_meta": [
+        {
+          "module_no": 1,
+          "title": "Introduction: Concepts, Scope, Functions & Cost of Capital",
+          "hours": 6,
+          "weightage": "15%",
+          "bloom": "1, 2"
+        },
+        {
+          "module_no": 2,
+          "title": "Analysis and Interpretation of Corporate Final Accounts",
+          "hours": 6,
+          "weightage": "15%",
+          "bloom": "1, 2, 3"
+        },
+        {
+          "module_no": 3,
+          "title": "Capital Budgeting",
+          "hours": 4,
+          "weightage": "10%",
+          "bloom": "1, 2"
+        },
+        {
+          "module_no": 4,
+          "title": "Leverage Analysis & Capital Structure Theories",
+          "hours": 6,
+          "weightage": "15%",
+          "bloom": "1, 2, 3"
+        },
+        {
+          "module_no": 5,
+          "title": "Investment Decisions & Risk Appraisal",
+          "hours": 6,
+          "weightage": "15%",
+          "bloom": "1, 2, 3"
+        },
+        {
+          "module_no": 6,
+          "title": "Dividend Policies",
+          "hours": 6,
+          "weightage": "15%",
+          "bloom": "1, 2, 3"
+        },
+        {
+          "module_no": 7,
+          "title": "Management of Working Capital",
+          "hours": 6,
+          "weightage": "15%",
+          "bloom": "1, 2, 3"
+        }
+      ],
+      "books": [
+        "\"Financial Management: Theory and Practice\" by Prasanna Chandra",
+        "\"Financial Management\" by I. M. Pandey",
+        "\"Financial Management: Principles and Applications\" by S. N. Maheshwari",
+        "\"Strategic Financial Management\" by Ravi M. Kishore",
+        "\"Financial Management: Text, Problems and Cases\" by M. Y. Khan and P. K. Jain."
+      ]
+    }
+  ],
+  "practicals": [
+    {
+      "id": "bcac591",
+      "code": "BCAC591",
+      "name": "PHP WITH MYSQL LAB",
+      "subject_ref": "bcac501",
+      "credit": 2,
+      "instruction": "The practical classes should comprehensively cover the theoretical syllabus, including the implementation of a small-scale project to enhance conceptual understanding and enable students to learn how to apply their knowledge to solve real-world problems.",
+      "sample_cases": [
+        {
+          "case_no": 1,
+          "title": "User Registration and Login System",
+          "description": "A website needs a secure system for user registration and login, allowing users to create accounts and access personalized content. Develop a PHP and MySQL-based system where users can register with a username and password, and log in to access their profile page. Implement password hashing for security."
+        },
+        {
+          "case_no": 2,
+          "title": "Content Management System (CMS)",
+          "description": "A blog site requires a CMS that allows authors to write, edit, and publish articles. Design a CMS using PHP and MySQL where authors can log in, create new posts, edit existing posts, and delete posts. The system should display posts to the public in a structured format."
+        },
+        {
+          "case_no": 3,
+          "title": "Online Voting System",
+          "description": "An organization wants to conduct online elections where members can vote for their preferred candidates. Create a PHP and MySQL-based voting system where users can register, vote for candidates, and view voting results. Ensure that each user can vote only once."
+        },
+        {
+          "case_no": 4,
+          "title": "E-commerce Product Catalog",
+          "description": "An online store needs to manage its product catalog, allowing users to browse products by category and view product details. Implement a product catalog system in PHP and MySQL where users can browse products by category, search for specific products, and view detailed descriptions and prices."
+        },
+        {
+          "case_no": 5,
+          "title": "Event Management System",
+          "description": "A company needs a system to manage events, including registration, scheduling, and participant lists. Develop a PHP and MySQL-based event management system where users can register for events, view event schedules, and check participant lists."
+        },
+        {
+          "case_no": 6,
+          "title": "Forum or Discussion Board",
+          "description": "A community website needs a forum where users can post topics, reply to discussions, and view threads. Build a forum using PHP and MySQL where users can create new discussion threads, reply to existing threads, and manage their posts. Implement user authentication to control access."
+        }
+      ]
+    },
+    {
+      "id": "bcac592",
+      "code": "BCAC592",
+      "name": "Object Oriented Programming with Java Lab",
+      "subject_ref": "bcac502",
+      "credit": 2,
+      "instruction": "The practical classes should comprehensively cover the theoretical syllabus, including the implementation of a small-scale project to enhance conceptual understanding and enable students to learn how to apply their knowledge to solve real-world problems.",
+      "sample_cases": [
+        {
+          "case_no": 1,
+          "title": "Library Book Issuing and Returning System",
+          "description": "A library wants to automate book issuing and returning processes. The system should track available books and issued books. Create classes Book, Library, and Member. Implement methods to issue a book to a member, return a book, and display the list of available books."
+        },
+        {
+          "case_no": 2,
+          "title": "Payroll System for Employee Salary",
+          "description": "A company requires a payroll system to calculate employee salaries based on hours worked and hourly rate. Develop an Employee class with attributes like name, id, hoursWorked, and hourlyRate. Implement methods to calculate the salary and generate a payroll report for all employees."
+        },
+        {
+          "case_no": 3,
+          "title": "Bank Account and Transaction Management",
+          "description": "A bank wants to manage customer accounts and transactions, including deposits, withdrawals, and balance inquiries. Create classes Account, Customer, and Transaction. Implement methods to perform deposits, withdrawals, and display account balance. Handle exceptions for insufficient balance during withdrawals."
+        },
+        {
+          "case_no": 4,
+          "title": "Vehicle Rental Service Hierarchy",
+          "description": "A rental service needs to manage its fleet of vehicles, including cars, bikes, and trucks, and keep track of their availability. Develop a hierarchy of classes starting with a base class Vehicle and derived classes Car, Bike, and Truck. Implement methods to check availability, rent a vehicle, and return a vehicle."
+        },
+        {
+          "case_no": 5,
+          "title": "Warehouse Inventory Tracking System",
+          "description": "A warehouse needs a system to track inventory levels, including adding new items, updating stock, and generating reports. Develop classes Item, Inventory, and Warehouse. Implement methods to add items to inventory, update stock levels, and generate inventory reports."
+        },
+        {
+          "case_no": 6,
+          "title": "Hotel Room Reservation System",
+          "description": "A hotel requires a booking system to manage room reservations, including checking room availability and booking rooms. Design classes Room, Hotel, and Reservation. Implement functionalities to check room availability, book a room, and display booking details."
+        }
+      ]
+    }
+  ]
+}
