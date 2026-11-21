@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MAKAUT Semester V Academic Learning Platform - BCA & MIM Digital Curriculum, Model Exam Solutions, Interactive Assessments and Laboratories.">
   <title>MAKAUT Semester V | Academic Learning Platform</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23377FE6'/><text x='16' y='22' fill='%23FFFFFF' font-size='18' font-family='sans-serif' font-weight='800' text-anchor='middle'>V</text></svg>">
-  <style>
+  <meta name="description" content="MAKAUT Semester V Academic Learning Platform - BCA & MIM Digital Curriculum, Model Exam Solutions, Interactive Assessments and Laboratories.">
+  <style type="text/css" id="makaut-academic-theme">
 
 :root {
   --primary-blue: #8DB9F0;
@@ -686,6 +685,24 @@ body {
 }
 
 /* Code Snippet Styles */
+
+.copy-btn {
+  background: var(--surface-white);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.copy-btn:hover {
+  background: var(--lavender);
+  color: var(--vibrant-blue);
+  border-color: var(--primary-blue);
+}
+
 .code-block {
   background: #19283D;
   color: #F7F8FC;
@@ -1119,6 +1136,7 @@ body {
 }
 
   </style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23377FE6'/%3E%3Ctext x='16' y='22' fill='%23FFFFFF' font-size='18' font-family='sans-serif' font-weight='800' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
 </head>
 <body>
   <!-- Global Application Header -->
@@ -1168,13 +1186,196 @@ body {
       </button>
 
       <div id="studyProgressPill" class="progress-pill">
-        <span>⚡</span> <span>0% Complete</span>
+        <span>⚡</span> <span>0% Complete (0/62)</span>
       </div>
     </div>
   </header>
 
-  <!-- Main Viewport for Single Page Application -->
-  <main id="mainViewport" class="main-viewport" role="main"></main>
+  <!-- Main Viewport with Pre-Rendered Static Home Dashboard for Instant Display -->
+  <main id="mainViewport" class="main-viewport" role="main">
+
+        <div class="hero-card">
+          <div class="hero-meta"><span>🎓</span> MAKAUT ACADEMIC SYLLABUS PORTAL • SEMESTER V</div>
+          <h1 class="hero-title">Academic Learning &amp; Examination Portal</h1>
+          <p class="hero-subtitle">Comprehensive digital textbook, university model examination questions with diagrams, laboratory case studies, and knowledge assessment engines strictly extracted from MAKAUT syllabus.</p>
+          <div class="hero-stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon" style="background:#E9E8F8; color:#377FE6;">📚</div>
+              <div class="stat-info">
+                <div class="stat-num">62 Topics</div>
+                <div class="stat-label">Complete Digital Syllabus</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon" style="background:#EAF7F1; color:#28A994;">📝</div>
+              <div class="stat-info">
+                <div class="stat-num">40 Questions</div>
+                <div class="stat-label">Model Exam Q&amp;A</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon" style="background:#FFF8E6; color:#F2C75C;">🔬</div>
+              <div class="stat-info">
+                <div class="stat-num">12 Labs</div>
+                <div class="stat-label">Practical Case Studies</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon" style="background:#FDF1F1; color:#EF846B;">⚡</div>
+              <div class="stat-info">
+                <div class="stat-num">84 Quizzes</div>
+                <div class="stat-label">Interactive MCQ Bank</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h2>Prescribed Semester V Curriculum</h2>
+            <p>Select a course below to explore modules, lessons, and model question banks</p>
+          </div>
+        </div>
+
+        <div class="subject-grid">
+      
+          <div class="subject-card" style="border-top: 4px solid #377FE6;">
+            <div>
+              <div class="subject-top">
+                <span class="subject-badge" style="background:#E9E8F8; color:#377FE6;">Core Major (Theory)</span>
+                <span class="subject-code">BCAC501</span>
+              </div>
+              <h3 class="subject-name">PHP with MySQL</h3>
+              <p class="subject-desc">The primary objective of the PHP with MySQL course is to equip students with the knowledge and skills necessary to design and develop dynamic, data-driven web applications. Through this course, students will learn the fundamentals of server-side scripting using PHP, understand how to interact with MySQL databases for data storage and retrieval, and apply best practices in web development, including security, error handling, and efficient coding techniques. By the end of the course, students will be able to create fully functional web applications that are secure, scalable, and maintainable, preparing them for further studies or entry-level roles in web development.</p>
+            </div>
+            <div>
+              <div class="subject-stats-bar">
+                <span><strong>8</strong> Modules • <strong>48</strong> Hrs</span>
+                <span><strong>0%</strong> Complete (0/20)</span>
+              </div>
+              <div class="subject-actions">
+                <a href="#subject/BCAC501" class="btn btn-primary" style="flex:1; background:#377FE6;">Curriculum</a>
+                <a href="#exams/BCAC501" class="btn btn-outline" style="flex:1;">Exam Q&amp;A</a>
+                <a href="#quiz/BCAC501" class="btn btn-outline" style="width:40px; padding:0;">⚡</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="subject-card" style="border-top: 4px solid #786CE5;">
+            <div>
+              <div class="subject-top">
+                <span class="subject-badge" style="background:#E9E8F8; color:#786CE5;">Core Major (Theory)</span>
+                <span class="subject-code">BCAC502</span>
+              </div>
+              <h3 class="subject-name">Object Oriented Programming with Java</h3>
+              <p class="subject-desc">The primary objective of the Object-Oriented Programming (OOP) with Java course is to provide students with a comprehensive understanding of object-oriented programming principles and their application using Java. The course aims to equip students with the skills needed to design, develop, and maintain robust and scalable software systems. By covering fundamental OOP concepts such as classes, objects, inheritance, polymorphism, and encapsulation, as well as advanced topics like interfaces, abstract classes, and design patterns, students will learn to write efficient, maintainable, and reusable code. The course will also emphasize best practices in Java programming, problem-solving techniques, and real-world application development, preparing students for careers in software development or further studies in computer science.</p>
+            </div>
+            <div>
+              <div class="subject-stats-bar">
+                <span><strong>9</strong> Modules • <strong>48</strong> Hrs</span>
+                <span><strong>0%</strong> Complete (0/18)</span>
+              </div>
+              <div class="subject-actions">
+                <a href="#subject/BCAC502" class="btn btn-primary" style="flex:1; background:#786CE5;">Curriculum</a>
+                <a href="#exams/BCAC502" class="btn btn-outline" style="flex:1;">Exam Q&amp;A</a>
+                <a href="#quiz/BCAC502" class="btn btn-outline" style="width:40px; padding:0;">⚡</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="subject-card" style="border-top: 4px solid #28A994;">
+            <div>
+              <div class="subject-top">
+                <span class="subject-badge" style="background:#E9E8F8; color:#28A994;">Management / Core</span>
+                <span class="subject-code">MIM501</span>
+              </div>
+              <h3 class="subject-name">Financial Management</h3>
+              <p class="subject-desc">The objective is to attain a comprehensive understanding of the basics of Financial Management and its application.</p>
+            </div>
+            <div>
+              <div class="subject-stats-bar">
+                <span><strong>7</strong> Modules • <strong>48</strong> Hrs</span>
+                <span><strong>0%</strong> Complete (0/14)</span>
+              </div>
+              <div class="subject-actions">
+                <a href="#subject/MIM501" class="btn btn-primary" style="flex:1; background:#28A994;">Curriculum</a>
+                <a href="#exams/MIM501" class="btn btn-outline" style="flex:1;">Exam Q&amp;A</a>
+                <a href="#quiz/MIM501" class="btn btn-outline" style="width:40px; padding:0;">⚡</a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="subject-card" style="border-top: 4px solid #EF846B;">
+            <div>
+              <div class="subject-top">
+                <span class="subject-badge" style="background:#E9E8F8; color:#EF846B;">Management / Core</span>
+                <span class="subject-code">MIM502</span>
+              </div>
+              <h3 class="subject-name">Entrepreneurship</h3>
+              <p class="subject-desc">The aim of a course in entrepreneurship typically focuses on equipping students with the knowledge, skills, and mind set necessary to start, manage, and grow their own business ventures. The course objectives are to equip students with the knowledge and skills necessary to identify and evaluate business opportunities, develop comprehensive business plans, and understand the financial, legal, and ethical aspects of launching and managing a startup.</p>
+            </div>
+            <div>
+              <div class="subject-stats-bar">
+                <span><strong>5</strong> Modules • <strong>48</strong> Hrs</span>
+                <span><strong>0%</strong> Complete (0/10)</span>
+              </div>
+              <div class="subject-actions">
+                <a href="#subject/MIM502" class="btn btn-primary" style="flex:1; background:#EF846B;">Curriculum</a>
+                <a href="#exams/MIM502" class="btn btn-outline" style="flex:1;">Exam Q&amp;A</a>
+                <a href="#quiz/MIM502" class="btn btn-outline" style="width:40px; padding:0;">⚡</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-heading" style="margin-top:2.5rem;">
+          <div>
+            <h2>Prescribed Practical Laboratories</h2>
+            <p>12 industry-grade case studies with architecture flowcharts, executable code, and viva questions</p>
+          </div>
+        </div>
+        <div class="subject-grid">
+          <div class="subject-card" style="border-top: 4px solid #377FE6;">
+            <div>
+              <div class="subject-top">
+                <span class="subject-badge">Core Practical Lab</span>
+                <span class="subject-code">BCAC591</span>
+              </div>
+              <h3 class="subject-name">PHP with MySQL Lab</h3>
+              <p class="subject-desc">Comprehensive real-world implementations: User Authentication, CMS Publishing, Electoral Systems, E-Commerce Catalogs, Event Managers, and Discussion Boards.</p>
+            </div>
+            <div>
+              <div class="subject-stats-bar">
+                <span><strong>6</strong> Case Studies • <strong>2</strong> Credits</span>
+                <span>Includes Full Code &amp; Viva</span>
+              </div>
+              <div class="subject-actions">
+                <a href="#practicals/BCAC591" class="btn btn-primary" style="width:100%;">Open Lab Projects</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="subject-card" style="border-top: 4px solid #786CE5;">
+            <div>
+              <div class="subject-top">
+                <span class="subject-badge">Core Practical Lab</span>
+                <span class="subject-code">BCAC592</span>
+              </div>
+              <h3 class="subject-name">Object Oriented Programming with Java Lab</h3>
+              <p class="subject-desc">Enterprise system models: Library Book Circulation, Employee Payroll Engine, Bank Transactions with Exceptions, Vehicle Rental Hierarchies, Warehouse Inventory, and Hotel Reservations.</p>
+            </div>
+            <div>
+              <div class="subject-stats-bar">
+                <span><strong>6</strong> Case Studies • <strong>2</strong> Credits</span>
+                <span>Includes Architecture &amp; Output</span>
+              </div>
+              <div class="subject-actions">
+                <a href="#practicals/BCAC592" class="btn btn-primary" style="width:100%; background:#786CE5;">Open Lab Projects</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+  </main>
 
   <!-- Global Fuzzy Search Modal -->
   <div id="searchModalOverlay" class="search-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalSearchTitle">
@@ -2208,7 +2409,32 @@ body {
   };
 
   // Boot Application
-  document.addEventListener('DOMContentLoaded', () => App.init());
+  
+  // Expose App to window
+  window.App = App;
+
+  // Boot Application reliably across all environments (Live Server, file://, cached)
+  function bootApp() {
+    try {
+      App.init();
+    } catch (err) {
+      console.error('App init error:', err);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootApp);
+  } else {
+    bootApp();
+  }
+
+  window.addEventListener('load', () => {
+    const vp = document.getElementById('mainViewport');
+    if (vp && !vp.children.length) {
+      bootApp();
+    }
+  });
+
 })();
 
   </script>
