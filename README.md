@@ -25,32 +25,37 @@ The platform bridges academic rigor with modern instructional design, offering a
 ### 1. Home Dashboard & Academic Metrics
 The central dashboard provides instantaneous syllabus navigation, resume-reading capability, curriculum completion analytics, and quick-access cards across all theory and practical subjects.
 
-![Sankho Portal Academic Dashboard](docs/images/academic_dashboard_1440.png)
+![Sankho Portal Academic Dashboard](docs/images/sankho_home_dashboard.png)
 
 ---
 
-### 2. Enterprise Academic Design System & Restrained Page Headers
-Engineered with an authoritative enterprise academic design system prioritizing long-duration study sessions (2+ hours without visual fatigue), purposeful typographic hierarchy, and zero generic "vibe-coded" AI decorations.
+### 2. Premium Blue-Violet Academic Visual Theme & Cohesive Design System
+Engineered with a cohesive academic visual identity featuring a blue-violet palette, crisp typography, and purposeful visual hierarchy inspired by professional educational software products:
 
-- **Eradication of Vibe-Coding**: Completely eliminated ambient glowing circles (`::before`/`::after` radial gradients), decorative gradient backgrounds, oversaturated badges, arbitrary emoji icons, and artificial card wrappers around paragraphs.
-- **Academic Palette**: Restrained neutral canvas (`#f8fafc`), clean white surfaces (`#ffffff`), subtle structural borders (`#e2e8f0`), high-contrast Slate typography (`#0f172a`), and subject-specific accent tokens (PHP `#0284c7`, Java `#b45309`, FM `#0f766e`, Entrepreneurship `#6d28d9`).
-- **Structured Academic Headers**: Compact breadcrumbs, university section metadata (`SECTION B • UNIVERSITY EXAMINATION PREPARATION`), crisp typography, and flat 1px-bordered statistics panels taking minimal vertical space (<100px) so study material is immediately accessible.
+- **Cohesive Academic Palette**: Primary Blue (`#0875F9`), Deep Blue (`#064DB5`), Royal Violet (`#7052E8`), Deep Navy Headings (`#101B3D`), Light Page Canvas (`#F4F7FE`), Crisp White Card Surfaces (`#FFFFFF`), Muted Slate Body (`#536680`), and Subtle Structural Borders (`#DCE5F2`).
+- **Subject-Specific Color Identifiers**:
+  - `BCAC501 PHP with MySQL`: Primary Blue (`#0875F9`) with pastel blue badge (`#EBF3FE`)
+  - `BCAC502 OOP with Java`: Royal Violet (`#7052E8`) with pastel violet badge (`#F3E8FF`)
+  - `MIM501 Financial Management`: Emerald Green (`#16A36A`) with pastel green badge (`#ECFDF5`)
+  - `MIM502 Entrepreneurship`: Warm Orange (`#F28A24`) with pastel orange badge (`#FFF7ED`)
+- **Centerpiece Gradient Hero**: A rich `linear-gradient(135deg, #0875F9 0%, #064DB5 45%, #7052E8 100%)` container with background isometric cube wireframe geometry, flowing wave overlay, warm golden accent on `Portal` (`#FFD043`), an integrated 3D academic workspace vector illustration, and 4 dynamically calculated metric panels.
+- **Inner Page Headers (Section Standard)**: Crisp white surface cards with subtle top-right radial glow (`rgba(8,117,249,0.06)`), soft border (`#DCE5F2`), rounded 16px corners, and light-blue pill badges (`SECTION B • UNIVERSITY EXAMINATION PREPARATION`) across all study and examination views.
 
-![Academic Model Examination System](docs/images/academic_model_exams_1440.png)
+![Academic Model Examination System](docs/images/sankho_model_exams.png)
 
 ---
 
 ### 3. Comprehensive Financial Management Mathematics & Interactive Solvers
 Exhaustive mathematical formulations for **MIM501: Financial Management** across all 7 syllabus modules. Includes KaTeX LaTeX equations, variable definitions, university exam tips, and 4 live step-by-step calculation engines (WACC, Operating Cycle, EOQ, and Financial/Operating Leverage).
 
-![Financial Mathematics Cheatsheet & Live Solvers](docs/images/academic_cheatsheet_1440.png)
+![Financial Mathematics Cheatsheet & Live Solvers](docs/images/sankho_formula_cheatsheet.png)
 
 ---
 
 ### 4. 29-Module Syllabus Traceability Matrix
 Every syllabus topic and subtopic is mapped with complete traceability across subject codes, module titles, prescribed lecture hours, and textbook references.
 
-![Syllabus Traceability Matrix](docs/images/academic_syllabus_matrix_1440.png)
+![Syllabus Traceability Matrix](docs/images/sankho_syllabus_matrix.png)
 
 ---
 
@@ -84,7 +89,7 @@ Clear hierarchical progression: **Subject → Module → Granular Lesson → Pra
 ### 8. Practical Laboratories Manual & Viva Voce
 Full implementation code with architectural flow diagrams, step-by-step algorithms, sample inputs/outputs, and comprehensive viva voce preparation across papers **BCAC591** and **BCAC592**. Features one-click copyable code blocks with parameter breakdowns.
 
-![Practical Laboratories Manual](docs/images/academic_practicals_1440.png)
+![Practical Laboratories Manual](docs/images/sankho_practicals.png)
 
 ---
 
