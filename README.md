@@ -30,6 +30,11 @@ The central dashboard provides instantaneous syllabus navigation, resume-reading
 
 ![Sankho Portal Academic Dashboard](docs/images/sankho_home_dashboard.png)
 
+<div align="center">
+  <img src="docs/images/sankho_cards_scrolled.png" alt="Sankho Portal Prescribed Subject Cards with Corner Wave Art" width="100%" />
+  <p><em>Prescribed Semester V Subject Cards featuring multi-layer organic corner wave artwork, subject badges, and responsive action buttons</em></p>
+</div>
+
 ---
 
 ### 2. Premium Blue-Violet Academic Design Architecture
@@ -45,10 +50,10 @@ Engineered in strict accordance with the **Sankho Academic Design Specification*
   - **Secondary Text (`#536680`)**: Supporting body text, subtitles, and metadata descriptions.
   - **Border Subtle (`#DCE5F2`)**: Dividers, card borders, and structural separators.
 - **Subject-Specific Curriculum Accents**:
-  - `BCAC501 PHP with MySQL`: Primary Blue (`#0875F9`) with soft blue badge (`#EBF3FF`)
-  - `BCAC502 OOP with Java`: Royal Violet (`#7052E8`) with soft violet badge (`#F5F0FF`)
+  - `BCAC501 PHP with MySQL`: Vibrant Teal (`#00A389`) with soft mint badge (`#E6F8F5`)
+  - `BCAC502 OOP with Java`: Royal Violet (`#5B3EE4` / `#7052E8`) with soft violet badge (`#F3E8FF`)
   - `MIM501 Financial Management`: Emerald Green (`#16A36A`) with soft green badge (`#ECFDF5`)
-  - `MIM502 Entrepreneurship`: Warm Orange (`#F28A24`) with soft orange badge (`#FFF7ED`)
+  - `MIM502 Entrepreneurship`: Warm Orange (`#FF7A00`) with soft orange badge (`#FFF3E8`)
 - **Vibrant Blue-to-Violet Hero Banner & 3D Academic Artwork**:
   - A hero centerpiece with rich gradient background (`linear-gradient(135deg, #0267F2 0%, #0875F9 45%, #6A4FF2 100%)`), subtle isometric wireframe cubes, and soft flowing curves.
   - Translucent frosted-glass eyebrow pill: `SEMESTER V • CURRICULUM ARCHITECTURE`.
@@ -59,6 +64,21 @@ Engineered in strict accordance with the **Sankho Academic Design Specification*
   - Clean white surface cards (`#FFFFFF`) with soft top-right radial blue aura (`rgba(8, 117, 249, 0.05)`), border (`#DCE5F2`), rounded 16px corners, and soft blue/violet pill badges across all model exams, matrices, labs, cheatsheets, and assessment views.
 
 ![Academic Model Examination System](docs/images/sankho_model_exams.png)
+
+
+### 3. Signature Corner Wave Artwork & Fluid Micro-Animations
+The prescribed curriculum cards and practical laboratory cards feature custom vector artwork and high-performance GPU-accelerated micro-interactions:
+- **Layered Corner Wave Vector Art**: Each card features an absolute-positioned top-right vector illustration composed of:
+  - An underlying isometric geometric grid mesh pattern (`stroke-width: 1.1`, opacity `0.18-0.35`).
+  - An outermost translucent fluid wave ribbon (`opacity: 0.08 - 0.20`).
+  - A middle flowing ribbon (`opacity: 0.20 - 0.45`).
+  - A foreground vibrant linear-gradient wave flowing organically across the top-right border.
+- **Interactive Card Elevation & Hover Bloom**: Hovering any card triggers a butter-smooth cubic-bezier translation (`translateY(-6px)`) with dual-layer shadow bloom (`0 16px 32px -8px rgba(16, 27, 61, 0.12), 0 4px 12px rgba(16, 27, 61, 0.04)`).
+- **Multi-Layer Wave Fluid Motion**: Hovering a card causes the wave ribbons to subtly drift and scale at differentiated cubic-bezier speeds (`scale(1.08)` outer, `scale(1.05)` middle, `scale(1.03)` inner) creating a realistic fluid ripple.
+- **Icon Box Spring Interaction**: Subject vector icon boxes smoothly scale (`scale(1.1) translateY(-2px)`) with soft elevation shadow.
+- **Primary Button Micro-Interaction**: The `Explore Modules →` solid button lifts on hover, while its right arrow (`→`) translates smoothly rightwards (`translateX(4px)`).
+- **Secondary Ghost Button Hover Tint**: `MCQs` and `Exams` buttons dynamically transition their border and text to the subject's accent color with a subtle tinted background wash.
+- **Smooth Progress Bar Interpolation**: Progress tracks smoothly interpolate completed modules and topics with cubic-bezier easing.
 
 ---
 
