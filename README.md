@@ -1,5 +1,8 @@
-# Sankho Portal — Semester V (BCA & MIM)
-### Complete Academic Learning, Examination Preparation & Interactive Knowledge Platform
+<div align="center">
+  <img src="docs/images/sankho_logo.png" alt="Sankho Portal, BCA and MIM Curriculum" width="480" />
+  <h3>Complete Academic Learning, Examination Preparation &amp; Interactive Knowledge Platform</h3>
+  <p><em>Official Semester V Curriculum Architecture • BCA &amp; MIM Disciplines</em></p>
+</div>
 
 [![University Curriculum](https://img.shields.io/badge/Curriculum-MAKAUT%20Autonomous%20Affiliated-blue.svg)](https://makautwb.ac.in/)
 [![Syllabus Coverage](https://img.shields.io/badge/Syllabus%20Traceability-100%25%20(29%20Modules)-success.svg)](#curriculum-architecture--syllabus-coverage)
