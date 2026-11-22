@@ -2557,6 +2557,330 @@ body {
 }
 
 
+/* ========================================================
+   ENHANCED HERO HEADER & CHEATSHEET SYSTEM
+   ======================================================== */
+.hero-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFD 50%, #EEF2FB 100%) !important;
+  border: 1px solid rgba(218, 225, 238, 0.9) !important;
+  border-radius: 16px !important;
+  padding: 2.25rem 2.5rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 4px 24px -2px rgba(30, 41, 59, 0.06), 0 2px 6px -1px rgba(30, 41, 59, 0.02) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(55, 127, 230, 0.12) 0%, rgba(120, 108, 229, 0.05) 50%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 20%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(40, 169, 148, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1 1 500px;
+  min-width: 280px;
+}
+
+.hero-side-card {
+  flex: 0 1 340px;
+  min-width: 260px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 233, 241, 0.95);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 16px -2px rgba(55, 127, 230, 0.08);
+}
+
+.hero-side-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.hero-side-stat {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  background: #F8FAFD;
+  border: 1px solid #EBF0F8;
+}
+
+.hero-side-stat-num {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--vibrant-blue);
+  line-height: 1.1;
+}
+
+.hero-side-stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+.hero-side-footer {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Cheatsheet filter & search */
+.cheatsheet-filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.cheatsheet-search-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  margin-bottom: 1.5rem;
+}
+
+.cheatsheet-search-input {
+  width: 100%;
+  padding: 0.65rem 1rem 0.65rem 2.5rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--pill-radius);
+  font-size: 0.9rem;
+  outline: none;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+.cheatsheet-search-input:focus {
+  border-color: var(--vibrant-blue);
+  box-shadow: 0 0 0 3px rgba(55, 127, 230, 0.15);
+}
+
+.cheatsheet-search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+/* Formula Cards Grid */
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.formula-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.formula-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.formula-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--vibrant-blue), var(--violet));
+}
+
+.formula-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.formula-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.formula-math-box {
+  background: #F8FAFD;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.formula-legend {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  background: #FAFCFF;
+  padding: 0.65rem 0.85rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--vibrant-blue);
+}
+
+.formula-example {
+  background: #F0FDF4;
+  border: 1px solid #DCFCE7;
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.825rem;
+  color: #166534;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.formula-tip {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: 0.775rem;
+  color: var(--violet);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Interactive Math Solvers */
+.calc-card {
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.calc-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.calc-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.calc-group input {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.calc-btn {
+  background: var(--vibrant-blue);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.calc-btn:hover {
+  background: #2368cc;
+}
+
+.calc-result-box {
+  background: #F0FDF4;
+  border: 1.5px solid #86EFAC;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 1.5rem !important;
+  }
+  .hero-layout {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1.25rem !important;
+  }
+  .hero-side-card {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+  }
+  .hero-side-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -4399,9 +4723,42 @@ window.DATA = {"subjects": [{"id": "BCAC501", "code": "BCAC501", "name": "PHP wi
 
       let html = `
         <div class="hero-card">
-          <div class="hero-meta"><span>📝</span> SECTION B • UNIVERSITY EXAMINATION PREPARATION</div>
-          <h1 class="hero-title">Model Examination Questions &amp; Answers</h1>
-          <p class="hero-subtitle">Comprehensive university model examination questions per theory subject adhering strictly to the mandatory 6-part structure: Introduction, Diagram, Detailed Explanation, Relevant Examples, 5 Key Points, and Conclusion.</p>
+          <div class="hero-layout">
+            <div class="hero-content">
+              <div class="hero-meta"><span>📝</span> SECTION B • UNIVERSITY EXAMINATION PREPARATION</div>
+              <h1 class="hero-title">Model Examination Questions &amp; Answers</h1>
+              <p class="hero-subtitle">Comprehensive university model examination questions per theory subject adhering strictly to the mandatory 6-part structure: Introduction, Technical Diagram, Detailed Explanation, Relevant Examples, 5 Key Points, and Conclusion.</p>
+              <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-top:1.15rem;">
+                <span class="badge-marks">10 Marks Standard</span>
+                <span class="badge-type">6-Part Model Rubric</span>
+                <span class="tag-badge" style="background:#EAF7F1; color:#28A994;">100% Solved Solutions</span>
+              </div>
+            </div>
+            <div class="hero-side-card">
+              <div style="font-size:0.75rem; font-weight:800; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.75rem;">Model Exam Bank</div>
+              <div class="hero-side-grid">
+                <div class="hero-side-stat">
+                  <span class="hero-side-stat-num">40</span>
+                  <span class="hero-side-stat-label">Model Questions</span>
+                </div>
+                <div class="hero-side-stat">
+                  <span class="hero-side-stat-num">4</span>
+                  <span class="hero-side-stat-label">Theory Papers</span>
+                </div>
+                <div class="hero-side-stat">
+                  <span class="hero-side-stat-num">10m</span>
+                  <span class="hero-side-stat-label">Standard Rubric</span>
+                </div>
+                <div class="hero-side-stat">
+                  <span class="hero-side-stat-num">520w</span>
+                  <span class="hero-side-stat-label">Avg Answer Depth</span>
+                </div>
+              </div>
+              <div class="hero-side-footer">
+                <span>✓</span> Verified solutions with full code, math &amp; diagrams
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="exam-filter-bar">
@@ -4493,9 +4850,34 @@ window.DATA = {"subjects": [{"id": "BCAC501", "code": "BCAC501", "name": "PHP wi
 
       let html = `
         <div class="hero-card">
-          <div class="hero-meta"><span>🔬</span> SECTION C • PRACTICAL PAPERS &amp; CASE STUDIES</div>
-          <h1 class="hero-title">Prescribed Practical Laboratory Projects</h1>
-          <p class="hero-subtitle">12 enterprise case studies strictly extracted from Sankho syllabus papers BCAC591 and BCAC592 featuring flowcharts, executable code, sample outputs, and viva voce.</p>
+          <div class="hero-layout">
+            <div class="hero-content">
+              <div class="hero-meta"><span>🔬</span> SECTION C • PRACTICAL PAPERS &amp; CASE STUDIES</div>
+              <h1 class="hero-title">Prescribed Practical Laboratory Projects</h1>
+              <p class="hero-subtitle">12 enterprise case studies strictly extracted from Sankho syllabus papers BCAC591 and BCAC592 featuring flowcharts, executable code, sample outputs, and viva voce.</p>
+            </div>
+            <div class="hero-side-card">
+              <div class="hero-side-grid">
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">12</div>
+                  <div class="hero-side-stat-label">Lab Projects</div>
+                </div>
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">2</div>
+                  <div class="hero-side-stat-label">Practical Papers</div>
+                </div>
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">100%</div>
+                  <div class="hero-side-stat-label">Code Complete</div>
+                </div>
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">48+</div>
+                  <div class="hero-side-stat-label">Viva Questions</div>
+                </div>
+              </div>
+              <div class="hero-side-footer">BCAC591 (PHP/MySQL) &amp; BCAC592 (Java OOP)</div>
+            </div>
+          </div>
         </div>
 
         <div class="exam-filter-bar">
@@ -4576,9 +4958,34 @@ window.DATA = {"subjects": [{"id": "BCAC501", "code": "BCAC501", "name": "PHP wi
 
       let html = `
         <div class="hero-card">
-          <div class="hero-meta"><span>⚡</span> SECTION D • INTERACTIVE KNOWLEDGE ASSESSMENT</div>
-          <h1 class="hero-title">University Syllabus Quiz Engine</h1>
-          <p class="hero-subtitle">84 comprehensive multiple-choice assessment questions (21 per theory course) testing core syllabus concepts with instantaneous feedback, explanations, and score tracking.</p>
+          <div class="hero-layout">
+            <div class="hero-content">
+              <div class="hero-meta"><span>⚡</span> SECTION D • INTERACTIVE KNOWLEDGE ASSESSMENT</div>
+              <h1 class="hero-title">University Syllabus Quiz Engine</h1>
+              <p class="hero-subtitle">84 comprehensive multiple-choice assessment questions (21 per theory course) testing core syllabus concepts with instantaneous feedback, explanations, and score tracking.</p>
+            </div>
+            <div class="hero-side-card">
+              <div class="hero-side-grid">
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">84</div>
+                  <div class="hero-side-stat-label">Quiz Questions</div>
+                </div>
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">4</div>
+                  <div class="hero-side-stat-label">Courses</div>
+                </div>
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">100%</div>
+                  <div class="hero-side-stat-label">Detailed Explanations</div>
+                </div>
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">Live</div>
+                  <div class="hero-side-stat-label">Instant Scoring</div>
+                </div>
+              </div>
+              <div class="hero-side-footer">Randomized options &amp; instant explanations</div>
+            </div>
+          </div>
         </div>
 
         <div class="exam-filter-bar">
@@ -4706,9 +5113,34 @@ window.DATA = {"subjects": [{"id": "BCAC501", "code": "BCAC501", "name": "PHP wi
 
       let html = `
         <div class="hero-card">
-          <div class="hero-meta"><span>★</span> SAVED REVISION TOPICS, QUESTIONS &amp; MCQS</div>
-          <h1 class="hero-title">Bookmarked Academic Content</h1>
-          <p class="hero-subtitle">Quick access to all digital textbook lessons, model questions, and MCQs you have flagged for high-yield revision.</p>
+          <div class="hero-layout">
+            <div class="hero-content">
+              <div class="hero-meta"><span>★</span> SAVED REVISION TOPICS, QUESTIONS &amp; MCQS</div>
+              <h1 class="hero-title">Bookmarked Academic Content</h1>
+              <p class="hero-subtitle">Quick access to all digital textbook lessons, model questions, and MCQs you have flagged for high-yield revision.</p>
+            </div>
+            <div class="hero-side-card">
+              <div class="hero-side-grid">
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">${bookmarkedLessons.length}</div>
+                  <div class="hero-side-stat-label">Saved Lessons</div>
+                </div>
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">${bookmarkedQuestions.length}</div>
+                  <div class="hero-side-stat-label">Saved Questions</div>
+                </div>
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">${bookmarkedMcqs.length}</div>
+                  <div class="hero-side-stat-label">Saved MCQs</div>
+                </div>
+                <div class="hero-side-stat">
+                  <div class="hero-side-stat-num">${bookmarkedLessons.length + bookmarkedQuestions.length + bookmarkedMcqs.length}</div>
+                  <div class="hero-side-stat-label">Total Saved</div>
+                </div>
+              </div>
+              <div class="hero-side-footer">Stored locally in your browser</div>
+            </div>
+          </div>
         </div>
       `;
 
@@ -4799,59 +5231,719 @@ window.DATA = {"subjects": [{"id": "BCAC501", "code": "BCAC501", "name": "PHP wi
 
       container.innerHTML = html;
     },
-    // 8. FORMULA & REVISION SHEET VIEW
-    renderFormulaSheet(container) {
+    // 8. FORMULA & REVISION SHEET VIEW (COMPREHENSIVE ACADEMIC CHEATSHEET & MATH ENGINE)
+    renderFormulaSheet(container, activeTab) {
+      const currentTab = activeTab || 'all';
+
       let html = `
         <div class="hero-card">
-          <div class="hero-meta"><span>📖</span> QUICK REVISION • EXAM CHEAT SHEET</div>
-          <h1 class="hero-title">Academic Formula &amp; Rapid Revision Reference</h1>
-          <p class="hero-subtitle">Consolidated mathematical formulas, core algorithms, syntax templates, and definitions for high-yield university examination revision.</p>
+          <div class="hero-layout">
+            <div class="hero-content">
+              <div class="hero-meta"><span>📖</span> QUICK REVISION • EXAM CHEAT SHEET</div>
+              <h1 class="hero-title">Academic Formula &amp; Rapid Revision Reference</h1>
+              <p class="hero-subtitle">Consolidated mathematical formulas, interactive calculation engines, core algorithmic templates, and high-yield revision summaries across all four Semester V subjects.</p>
+              <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-top:1.15rem;">
+                <span class="badge-marks">65+ High-Yield Formulas</span>
+                <span class="badge-type">4 Interactive Solvers</span>
+                <span class="tag-badge" style="background:#EAF7F1; color:#28A994;">Step-by-Step Math</span>
+              </div>
+            </div>
+            <div class="hero-side-card">
+              <div style="font-size:0.75rem; font-weight:800; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.75rem;">Cheatsheet Highlights</div>
+              <div class="hero-side-grid">
+                <div class="hero-side-stat">
+                  <span class="hero-side-stat-num">65+</span>
+                  <span class="hero-side-stat-label">Master Formulas</span>
+                </div>
+                <div class="hero-side-stat">
+                  <span class="hero-side-stat-num">4</span>
+                  <span class="hero-side-stat-label">Live Solvers</span>
+                </div>
+                <div class="hero-side-stat">
+                  <span class="hero-side-stat-num">100%</span>
+                  <span class="hero-side-stat-label">Syllabus Math</span>
+                </div>
+                <div class="hero-side-stat">
+                  <span class="hero-side-stat-num">4</span>
+                  <span class="hero-side-stat-label">Subject Guides</span>
+                </div>
+              </div>
+              <div class="hero-side-footer">
+                <span>⚡</span> Interactive calculation engines for instant verification
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.5rem;">
-          <div class="exam-card" style="padding:1.5rem;">
-            <h3 style="color:var(--vibrant-blue); margin-bottom:1rem;">Financial Management: Cost of Capital</h3>
-            <div style="font-size:0.875rem; line-height:1.7;">
-              <p><strong>Cost of Debt (Kd):</strong> <code>Kd = [I(1 - t)] / NP</code></p>
-              <p><strong>Cost of Preference (Kp):</strong> <code>Kp = Dp / NP</code></p>
-              <p><strong>Gordon's Growth Ke:</strong> <code>Ke = (D1 / P0) + g</code></p>
-              <p><strong>CAPM Cost of Equity:</strong> <code>Ke = Rf + Beta * (Rm - Rf)</code></p>
-              <p><strong>WACC (Ko):</strong> <code>Ko = (Wd * Kd) + (Wp * Kp) + (We * Ke) + (Wr * Kr)</code></p>
+        <!-- Cheatsheet Subject Filtering Tabs -->
+        <div class="cheatsheet-filter-bar">
+          <button class="filter-pill cheatsheet-pill ${currentTab === 'all' ? 'active' : ''}" data-tab="all" onclick="App.switchCheatsheetTab('all')">
+            📚 All Master References
+          </button>
+          <button class="filter-pill cheatsheet-pill ${currentTab === 'fm' ? 'active' : ''}" data-tab="fm" onclick="App.switchCheatsheetTab('fm')">
+            📊 Financial Management Math (MIM501)
+          </button>
+          <button class="filter-pill cheatsheet-pill ${currentTab === 'solvers' ? 'active' : ''}" data-tab="solvers" onclick="App.switchCheatsheetTab('solvers')">
+            ⚡ Interactive Math Solvers
+          </button>
+          <button class="filter-pill cheatsheet-pill ${currentTab === 'java' ? 'active' : ''}" data-tab="java" onclick="App.switchCheatsheetTab('java')">
+            ☕ Java OOP Cheatsheet (BCAC502)
+          </button>
+          <button class="filter-pill cheatsheet-pill ${currentTab === 'php' ? 'active' : ''}" data-tab="php" onclick="App.switchCheatsheetTab('php')">
+            🐘 PHP &amp; MySQL Security (BCAC501)
+          </button>
+          <button class="filter-pill cheatsheet-pill ${currentTab === 'ent' ? 'active' : ''}" data-tab="ent" onclick="App.switchCheatsheetTab('ent')">
+            🚀 Entrepreneurship Frameworks (MIM502)
+          </button>
+        </div>
+
+        <!-- Instant Filter Search Bar -->
+        <div class="cheatsheet-search-wrap">
+          <span class="cheatsheet-search-icon">🔍</span>
+          <input type="text" class="cheatsheet-search-input" id="cheatsheetSearch" placeholder="Type to filter formulas (e.g., WACC, Gordon, DuPont, EOQ, Overriding, PDO, Tandon)..." oninput="App.filterCheatsheet(this.value)">
+        </div>
+
+        <!-- SECTION 1: INTERACTIVE LIVE MATH SOLVERS -->
+        <div class="formula-grid" id="cheatsheetSolversSection" style="margin-bottom:2.5rem;">
+          <!-- Solver 1: WACC & Hurdle Rate Calculator -->
+          <div class="calc-card" data-category="solvers" style="grid-column: 1 / -1;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem;">
+              <div>
+                <span class="tag-badge" style="background:#E9E8F8; color:#377FE6; font-weight:800;">LIVE INTERACTIVE ENGINE</span>
+                <h3 style="font-size:1.25rem; font-weight:800; color:var(--text-primary); margin-top:0.35rem;">Weighted Average Cost of Capital (WACC / Ko) &amp; Hurdle Rate Solver</h3>
+                <p style="font-size:0.875rem; color:var(--text-secondary); margin-top:0.2rem;">Calculate the corporate cost of capital using the formula $K_o = (W_e 	imes K_e) + (W_d 	imes K_d(1 - T))$.</p>
+              </div>
+              <button class="calc-btn" onclick="App.calculateWACC()">⚡ Calculate WACC</button>
+            </div>
+            <div class="calc-grid">
+              <div class="calc-group">
+                <label>Equity Weight (We):</label>
+                <input type="number" id="wacc_we" step="0.05" min="0" max="1" value="0.60">
+              </div>
+              <div class="calc-group">
+                <label>Cost of Equity (Ke %):</label>
+                <input type="number" id="wacc_ke" step="0.1" value="14.0">
+              </div>
+              <div class="calc-group">
+                <label>Debt Weight (Wd):</label>
+                <input type="number" id="wacc_wd" step="0.05" min="0" max="1" value="0.40">
+              </div>
+              <div class="calc-group">
+                <label>Pre-Tax Debt Rate (%):</label>
+                <input type="number" id="wacc_kd_pre" step="0.1" value="10.0">
+              </div>
+              <div class="calc-group">
+                <label>Corporate Tax Rate (%):</label>
+                <input type="number" id="wacc_tax" step="1" value="30.0">
+              </div>
+            </div>
+            <div class="calc-result-box" id="waccResult">
+              <strong>Sample Output:</strong> Post-tax Kd = 7.00% | Equity Part = 8.40% | Debt Part = 2.80% | <strong>WACC (Ko) = 11.20%</strong> (Click calculate to test custom parameters).
             </div>
           </div>
 
-          <div class="exam-card" style="padding:1.5rem;">
-            <h3 style="color:var(--violet); margin-bottom:1rem;">Financial Management: Leverage &amp; Valuation</h3>
-            <div style="font-size:0.875rem; line-height:1.7;">
-              <p><strong>Operating Leverage (DOL):</strong> <code>Contribution / EBIT</code></p>
-              <p><strong>Financial Leverage (DFL):</strong> <code>EBIT / EBT</code></p>
-              <p><strong>Combined Leverage (DCL):</strong> <code>DOL * DFL = Contribution / EBT</code></p>
-              <p><strong>Net Present Value (NPV):</strong> <code>Sum[ CFt / (1+k)^t ] - C0</code></p>
-              <p><strong>Walter's Share Price:</strong> <code>P = [ D + (r/k)(E - D) ] / k</code></p>
-              <p><strong>Gordon's Share Price:</strong> <code>P0 = D1 / (ke - g)</code></p>
-              <p><strong>Operating Cycle (NOC):</strong> <code>R + W + F + D - C</code></p>
+          <!-- Solver 2: Operating Cycle & Working Capital Calculator -->
+          <div class="calc-card" data-category="solvers" style="grid-column: 1 / -1;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem;">
+              <div>
+                <span class="tag-badge" style="background:#EAF7F1; color:#28A994; font-weight:800;">LIVE INTERACTIVE ENGINE</span>
+                <h3 style="font-size:1.25rem; font-weight:800; color:var(--text-primary); margin-top:0.35rem;">Net Operating Cycle (Cash Conversion Cycle) &amp; Working Capital Solver</h3>
+                <p style="font-size:0.875rem; color:var(--text-secondary); margin-top:0.2rem;">Solves $GOC = R + W + F + D$, $NOC = GOC - C$, and required Working Capital buffer in ₹.</p>
+              </div>
+              <button class="calc-btn" onclick="App.calculateOperatingCycle()">⚡ Calculate Cycle</button>
+            </div>
+            <div class="calc-grid">
+              <div class="calc-group">
+                <label>Raw Material (R) Days:</label>
+                <input type="number" id="occ_r" value="40">
+              </div>
+              <div class="calc-group">
+                <label>WIP Period (W) Days:</label>
+                <input type="number" id="occ_w" value="20">
+              </div>
+              <div class="calc-group">
+                <label>Finished Goods (F) Days:</label>
+                <input type="number" id="occ_f" value="30">
+              </div>
+              <div class="calc-group">
+                <label>Debtors (D) Days:</label>
+                <input type="number" id="occ_d" value="45">
+              </div>
+              <div class="calc-group">
+                <label>Creditors (C) Days:</label>
+                <input type="number" id="occ_c" value="35">
+              </div>
+              <div class="calc-group">
+                <label>Annual Cash Operating Cost (₹):</label>
+                <input type="number" id="occ_cost" value="7200000">
+              </div>
+            </div>
+            <div class="calc-result-box" id="occResult">
+              <strong>Sample Output:</strong> Gross Cycle = 135.0 Days | Net Operating Cycle = <strong>100.0 Days</strong> | Operating Cycles/Year = 3.65 | <strong>Required Net Working Capital = ₹19,72,603</strong>.
             </div>
           </div>
 
-          <div class="exam-card" style="padding:1.5rem;">
-            <h3 style="color:var(--coral); margin-bottom:1rem;">Java OOP Core Syntax &amp; Rules</h3>
-            <div style="font-size:0.875rem; line-height:1.7;">
-              <p><strong>Method Overriding:</strong> Cannot reduce visibility; cannot throw broader checked exceptions.</p>
-              <p><strong>Constructor Chaining:</strong> <code>this()</code> and <code>super()</code> must be the 1st statement.</p>
-              <p><strong>String Equality:</strong> Always use <code>s1.equals(s2)</code>, never <code>==</code>.</p>
-              <p><strong>try-with-resources:</strong> Automatic closure of classes implementing <code>AutoCloseable</code>.</p>
-              <p><strong>Default Conflicts:</strong> Resolved via <code>InterfaceName.super.method()</code>.</p>
+          <!-- Solver 3: EOQ & Inventory Cost Solver -->
+          <div class="calc-card" data-category="solvers" style="grid-column: 1 / -1;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem;">
+              <div>
+                <span class="tag-badge" style="background:#FFF8E6; color:#D97706; font-weight:800;">LIVE INTERACTIVE ENGINE</span>
+                <h3 style="font-size:1.25rem; font-weight:800; color:var(--text-primary); margin-top:0.35rem;">Economic Order Quantity (EOQ) &amp; Total Inventory Cost Solver</h3>
+                <p style="font-size:0.875rem; color:var(--text-secondary); margin-top:0.2rem;">Calculates $	ext{EOQ} = \sqrt{(2AO)/C}$ and verifies cost equilibrium where Ordering Cost equals Carrying Cost.</p>
+              </div>
+              <button class="calc-btn" onclick="App.calculateEOQ()">⚡ Calculate EOQ</button>
+            </div>
+            <div class="calc-grid">
+              <div class="calc-group">
+                <label>Annual Demand (A Units):</label>
+                <input type="number" id="eoq_a" value="10000">
+              </div>
+              <div class="calc-group">
+                <label>Ordering Cost / Order (₹ O):</label>
+                <input type="number" id="eoq_o" value="200">
+              </div>
+              <div class="calc-group">
+                <label>Unit Purchase Price (₹ P):</label>
+                <input type="number" id="eoq_p" value="100">
+              </div>
+              <div class="calc-group">
+                <label>Carrying Cost % (I %):</label>
+                <input type="number" id="eoq_i" value="16.0">
+              </div>
+            </div>
+            <div class="calc-result-box" id="eoqResult">
+              <strong>Sample Output:</strong> Unit Carrying Cost = ₹16.00 | <strong>EOQ = 500 Units</strong> | Orders/Year = 20 | <strong>Total Annual Inventory Cost = ₹8,000</strong>.
             </div>
           </div>
 
-          <div class="exam-card" style="padding:1.5rem;">
-            <h3 style="color:var(--teal); margin-bottom:1rem;">PHP &amp; MySQL Security Hygiene</h3>
-            <div style="font-size:0.875rem; line-height:1.7;">
-              <p><strong>SQL Injection:</strong> Always use PDO prepared statements with parameter binding.</p>
-              <p><strong>XSS Prevention:</strong> Escape output with <code>htmlspecialchars($str, ENT_QUOTES, 'UTF-8')</code>.</p>
-              <p><strong>Password Security:</strong> Hash passwords with <code>password_hash($p, PASSWORD_BCRYPT)</code>; verify with <code>password_verify()</code>.</p>
-              <p><strong>Session Hijacking:</strong> Invoke <code>session_regenerate_id(true)</code> on login; set HttpOnly and SameSite cookie flags.</p>
-              <p><strong>CSRF Defense:</strong> Generate random session tokens and validate on every POST submission.</p>
+          <!-- Solver 4: Financial & Operating Leverage Solver -->
+          <div class="calc-card" data-category="solvers" style="grid-column: 1 / -1;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem;">
+              <div>
+                <span class="tag-badge" style="background:#FEE2E2; color:#DC2626; font-weight:800;">LIVE INTERACTIVE ENGINE</span>
+                <h3 style="font-size:1.25rem; font-weight:800; color:var(--text-primary); margin-top:0.35rem;">Operating, Financial &amp; Combined Leverage (DOL, DFL, DCL) Solver</h3>
+                <p style="font-size:0.875rem; color:var(--text-secondary); margin-top:0.2rem;">Decomposes business risk (DOL) and financial debt risk (DFL) into Total Combined Leverage (DCL).</p>
+              </div>
+              <button class="calc-btn" onclick="App.calculateLeverage()">⚡ Calculate Leverage</button>
+            </div>
+            <div class="calc-grid">
+              <div class="calc-group">
+                <label>Sales Revenue (₹):</label>
+                <input type="number" id="lev_sales" value="2000000">
+              </div>
+              <div class="calc-group">
+                <label>Variable Costs (₹):</label>
+                <input type="number" id="lev_vc" value="1200000">
+              </div>
+              <div class="calc-group">
+                <label>Fixed Operating Costs (₹):</label>
+                <input type="number" id="lev_fc" value="400000">
+              </div>
+              <div class="calc-group">
+                <label>Annual Interest Expense (₹):</label>
+                <input type="number" id="lev_int" value="100000">
+              </div>
+            </div>
+            <div class="calc-result-box" id="levResult">
+              <strong>Sample Output:</strong> Contribution = ₹8,00,000 | EBIT = ₹4,00,000 | EBT = ₹3,00,000 | <strong>DOL = 2.00x</strong> | <strong>DFL = 1.33x</strong> | <strong>DCL = 2.67x</strong>.
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: MASTER FORMULA CARDS GRID -->
+        <div class="section-heading">
+          <h2>Consolidated Syllabus Formula Cards &amp; Revision Profiles</h2>
+          <p>Comprehensive mathematical formulations, step-by-step variables, worked numericals, and exam pointers</p>
+        </div>
+
+        <div class="formula-grid" id="cheatsheetFormulaGrid">
+          <!-- CARD FM 1: Cost of Debt -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Cost of Debt Capital (Kd)</span>
+              <span class="badge-type">MIM501 • M1</span>
+            </div>
+            <div class="formula-math-box">
+              $$K_d	ext{ (Irredeemable)} = rac{I(1 - T)}{NP}$$<br>
+              $$K_d	ext{ (Redeemable)} = rac{I(1 - T) + rac{RV - NP}{n}}{rac{RV + NP}{2}}$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $I$ = Annual Coupon Interest; $T$ = Corporate Tax Rate; $NP$ = Net Proceeds (Face Value ± Premium/Discount - Floatation Cost); $RV$ = Redeemable Value at maturity; $n$ = Debt maturity in years.
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> 10% Debentures of ₹100 issued at 5% discount, tax rate 30%. $NP = ₹95$. Post-tax $K_d = [₹10(1 - 0.30)] / ₹95 = ₹7.00 / ₹95 = \mathbf{7.37\%}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Always multiply pre-tax debt cost by $(1 - T)$ because interest is tax-deductible under Section 36(1)(iii).
+            </div>
+          </div>
+
+          <!-- CARD FM 2: Cost of Equity: Gordon's Model -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Cost of Equity: Gordon's Growth Model</span>
+              <span class="badge-type">MIM501 • M1</span>
+            </div>
+            <div class="formula-math-box">
+              $$K_e = rac{D_1}{P_0} + g = rac{D_0(1 + g)}{P_0} + (b 	imes r)$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $D_1$ = Expected next year's dividend; $D_0$ = Current dividend; $P_0$ = Current market price per share; $g$ = Constant dividend growth rate ($g = b 	imes r$, retention ratio $	imes$ return on equity).
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> Current price $P_0 = ₹120$, current dividend $D_0 = ₹6$, growth rate $g = 6\%$. $D_1 = 6(1.06) = ₹6.36$. $K_e = (₹6.36 / ₹120) + 0.06 = 0.053 + 0.06 = \mathbf{11.30\%}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> If question says 'just paid dividend', that is $D_0$. Multiply by $(1 + g)$ to get $D_1$ before dividing by $P_0$.
+            </div>
+          </div>
+
+          <!-- CARD FM 3: Cost of Equity: CAPM Model -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Cost of Equity: Capital Asset Pricing Model (CAPM)</span>
+              <span class="badge-type">MIM501 • M1</span>
+            </div>
+            <div class="formula-math-box">
+              $$K_e = R_f + eta 	imes (R_m - R_f)$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $R_f$ = Risk-free rate (Government 10-Yr T-Bills); $eta$ = Systematic risk coefficient (Beta); $R_m$ = Expected return on the market portfolio (NIFTY/Sensex); $(R_m - R_f)$ = Equity Market Risk Premium.
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> $R_f = 7.0\%$, Market return $R_m = 13.0\%$, Company Beta $eta = 1.25$. $K_e = 7\% + 1.25(13\% - 7\%) = 7\% + 7.5\% = \mathbf{14.50\%}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> If $eta = 1.0$, $K_e = R_m$. If $eta > 1.0$, the stock is more volatile than the market (aggressive).
+            </div>
+          </div>
+
+          <!-- CARD FM 4: Weighted Average Cost of Capital (WACC) -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Weighted Average Cost of Capital (WACC / Ko)</span>
+              <span class="badge-type">MIM501 • M1</span>
+            </div>
+            <div class="formula-math-box">
+              $$K_o = (W_d 	imes K_d) + (W_p 	imes K_p) + (W_e 	imes K_e) + (W_r 	imes K_r)$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $W_i$ = Capital structure proportion weights ($\sum W_i = 1.0$); $K_i$ = Specific component costs of capital. Weights can be Book Value (BV) or Market Value (MV).
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> Equity 60% ($K_e = 15\%$), Debt 40% (post-tax $K_d = 7\%$). $K_o = (0.60 	imes 15\%) + (0.40 	imes 7\%) = 9.0\% + 2.8\% = \mathbf{11.80\%}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Market value weights are theoretically superior to book value weights because they reflect current economic opportunity costs.
+            </div>
+          </div>
+
+          <!-- CARD FM 5: Financial Statement Ratios: Liquidity -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Liquidity Ratios: Current &amp; Quick Ratios</span>
+              <span class="badge-type">MIM501 • M2</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{Current Ratio} = rac{	ext{Current Assets (CA)}}{	ext{Current Liabilities (CL)}} \quad [	ext{Benchmark: } 2 : 1]$$<br>
+              $$	ext{Quick Ratio} = rac{	ext{CA} - (	ext{Stock} + 	ext{Prepaid Expenses})}{	ext{CL}} \quad [	ext{Benchmark: } 1 : 1]$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> Quick Assets include Cash, Bank, Marketable Securities, and Debtors. Inventories and prepaid expenses are excluded due to lack of immediate liquidity.
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> $CA = ₹10,00,000$, Stock = $₹3,00,000$, $CL = ₹4,00,000$. $	ext{Current Ratio} = 10L/4L = \mathbf{2.5:1}$. $	ext{Quick Ratio} = 7L/4L = \mathbf{1.75:1}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> High current ratio is not always good; excessively high ratio indicates trapped capital in idle inventory or slow debtors.
+            </div>
+          </div>
+
+          <!-- CARD FM 6: Activity Ratios: Inventory & Debtors Turnover -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Activity Turnover Ratios &amp; Holding Days</span>
+              <span class="badge-type">MIM501 • M2</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{ITR} = rac{	ext{COGS}}{	ext{Average Inventory}} \implies 	ext{Holding Days} = rac{365}{	ext{ITR}}$$<br>
+              $$	ext{DTR} = rac{	ext{Net Credit Sales}}{	ext{Average Debtors}} \implies 	ext{Collection Days} = rac{365}{	ext{DTR}}$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $	ext{Average Inventory} = (	ext{Opening} + 	ext{Closing}) / 2$; $	ext{COGS} = 	ext{Sales} - 	ext{Gross Profit} = 	ext{Opening} + 	ext{Purchases} + 	ext{Direct Exp} - 	ext{Closing}$.
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> $	ext{COGS} = ₹36,00,000$, Avg Stock = $₹4,00,000$. $	ext{ITR} = 36L / 4L = \mathbf{9	ext{ times}}$. $	ext{Holding Days} = 365 / 9 = \mathbf{40.6	ext{ Days}}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Never use total sales in Debtors Turnover denominator if credit sales figure is given separately.
+            </div>
+          </div>
+
+          <!-- CARD FM 7: DuPont 3-Factor ROE Decomposition -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">DuPont 3-Step Identity (Return on Equity)</span>
+              <span class="badge-type">MIM501 • M2</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{ROE} = \left(rac{	ext{PAT}}{	ext{Sales}}ight) 	imes \left(rac{	ext{Sales}}{	ext{Assets}}ight) 	imes \left(rac{	ext{Assets}}{	ext{Equity}}ight)$$<br>
+              $$	ext{ROE} = 	ext{Net Profit Margin} 	imes 	ext{Asset Turnover} 	imes 	ext{Equity Multiplier}$$
+            </div>
+            <div class="formula-legend">
+              <strong>Three Value Drivers:</strong> (1) Operating Efficiency (Profit Margin); (2) Asset Utilization Efficiency (Asset Turnover); (3) Financial Leverage Risk (Equity Multiplier = Assets / Equity).
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> Net Margin = 8%, Asset Turnover = 1.5x, Equity Multiplier = 2.0x. $	ext{ROE} = 0.08 	imes 1.5 	imes 2.0 = \mathbf{24.0\%}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> DuPont analysis proves an enterprise can raise ROE through operating margin, asset efficiency, or financial leverage.
+            </div>
+          </div>
+
+          <!-- CARD FM 8: Capital Budgeting: Net Present Value (NPV) -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Net Present Value (NPV) &amp; Profitability Index (PI)</span>
+              <span class="badge-type">MIM501 • M3</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{NPV} = \sum_{t=1}^n rac{CF_t}{(1 + k)^t} - C_0 \quad [	ext{Accept if } 	ext{NPV} > 0]$$<br>
+              $$	ext{PI} = rac{	ext{PV of Cash Inflows}}{	ext{Initial Outlay } C_0} \quad [	ext{Accept if } 	ext{PI} > 1.0]$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $CF_t$ = Net Annual Operating Cash Inflows ($	ext{CFAT} = (	ext{Sales} - 	ext{Cash Costs} - 	ext{Depr})(1 - T) + 	ext{Depr}$); $k$ = Cost of capital discount rate; $C_0$ = Initial project outlay.
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> Outlay $C_0 = ₹10,00,000$. PV of 5-year cash inflows at 10% = $₹12,40,000$. $	ext{NPV} = ₹12.4L - ₹10L = \mathbf{+₹2,40,000}$. $	ext{PI} = 12.4L / 10L = \mathbf{1.24}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Depreciation is a non-cash expense; it provides a tax shield $Depr 	imes T$ but must be added back to PAT to find cash flow!
+            </div>
+          </div>
+
+          <!-- CARD FM 9: Internal Rate of Return (IRR) Interpolation -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Internal Rate of Return (IRR) Interpolation</span>
+              <span class="badge-type">MIM501 • M3</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{IRR} = L + \left[ rac{	ext{NPV}_L}{	ext{NPV}_L - 	ext{NPV}_H} ight] 	imes (H - L)$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $L$ = Lower discount rate giving positive $	ext{NPV}_L$; $H$ = Higher discount rate giving negative $	ext{NPV}_H$. At exact IRR, $	ext{NPV} = 0$.
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> At $L = 12\%$, $	ext{NPV}_L = +₹15,000$. At $H = 15\%$, $	ext{NPV}_H = -₹9,000$. $	ext{IRR} = 12\% + [15,000 / (15,000 - (-9,000))] 	imes (15 - 12) = 12\% + [15/24] 	imes 3 = 12\% + 1.875\% = \mathbf{13.88\%}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> If $	ext{IRR} > 	ext{Cost of Capital (WACC)}$, accept the project. In mutually exclusive conflicts with NPV, NPV takes priority.
+            </div>
+          </div>
+
+          <!-- CARD FM 10: Operating, Financial & Combined Leverage -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Leverage Formulas: DOL, DFL, and DCL</span>
+              <span class="badge-type">MIM501 • M4</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{DOL} = rac{	ext{Contribution}}{	ext{EBIT}} = rac{Q(S - V)}{Q(S - V) - F}$$<br>
+              $$	ext{DFL} = rac{	ext{EBIT}}{	ext{EBT} - rac{D_p}{1 - T}} = rac{	ext{EBIT}}{	ext{EBIT} - I}$$<br>
+              $$	ext{DCL} = 	ext{DOL} 	imes 	ext{DFL} = rac{	ext{Contribution}}{	ext{EBT}}$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $S$ = Selling price; $V$ = Variable cost/unit; $F$ = Fixed operating costs; $I$ = Interest expense; $D_p$ = Preference dividends; $T$ = Corporate tax rate.
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> Sales = ₹20L, VC = ₹12L ($	ext{Contrib} = ₹8L$), Fixed Cost = ₹4L ($EBIT = ₹4L$), Interest = ₹1L ($EBT = ₹3L$). $	ext{DOL} = 8/4 = \mathbf{2.0x}$; $	ext{DFL} = 4/3 = \mathbf{1.33x}$; $	ext{DCL} = 2.0 	imes 1.33 = \mathbf{2.67x}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> High DOL + High DFL creates extreme combined risk. A firm with high fixed operational overhead should avoid high debt!
+            </div>
+          </div>
+
+          <!-- CARD FM 11: EBIT-EPS Indifference Point -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">EBIT-EPS Indifference Level of Financing</span>
+              <span class="badge-type">MIM501 • M4</span>
+            </div>
+            <div class="formula-math-box">
+              $$rac{(	ext{EBIT}^* - I_1)(1 - T) - D_{p1}}{N_1} = rac{(	ext{EBIT}^* - I_2)(1 - T) - D_{p2}}{N_2}$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $	ext{EBIT}^*$ = Breakeven operating profit where both financing plans yield identical EPS; $I_1, I_2$ = Interest under Plan 1 and 2; $N_1, N_2$ = Number of equity shares under Plan 1 and 2.
+            </div>
+            <div class="formula-example">
+              <strong>Decision Rule:</strong> If expected $	ext{EBIT} > 	ext{EBIT}^*$, choose the plan with higher financial leverage (Debt plan). If $	ext{EBIT} < 	ext{EBIT}^*$, choose Equity plan.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> When setting up cross-multiplication, ensure preference dividends ($D_p$) are deducted AFTER multiplying interest by $(1 - T)$.
+            </div>
+          </div>
+
+          <!-- CARD FM 12: Capital Structure: MM Hypothesis with Taxes -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Modigliani-Miller (MM) with Corporate Taxes (1963)</span>
+              <span class="badge-type">MIM501 • M4</span>
+            </div>
+            <div class="formula-math-box">
+              $$V_L = V_U + (D 	imes T_c)$$<br>
+              $$K_{eL} = K_{eU} + (K_{eU} - K_d)(1 - T_c)\left(rac{D}{S}ight)$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $V_L$ = Total value of levered firm (Equity + Debt); $V_U$ = Total value of unlevered pure-equity firm; $D 	imes T_c$ = Present value of interest tax shield; $K_{eL}$ = Cost of equity of levered firm.
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> Unlevered firm value $V_U = ₹50	ext{ Crores}$. Firm issues ₹20 Crores debt ($T_c = 30\%$). $V_L = ₹50	ext{ Cr} + (₹20	ext{ Cr} 	imes 0.30) = ₹50	ext{ Cr} + ₹6	ext{ Cr} = \mathbf{₹56	ext{ Crores}}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Without taxes, $V_L = V_U$ (irrelevance). With taxes, firm value increases linearly with debt due to the interest tax shield!
+            </div>
+          </div>
+
+          <!-- CARD FM 13: Dividend Policy: Walter's Model -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Walter's Model of Dividend Relevance (1956)</span>
+              <span class="badge-type">MIM501 • M5</span>
+            </div>
+            <div class="formula-math-box">
+              $$P = rac{D + rac{r}{K_e}(E - D)}{K_e}$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $P$ = Market price per share; $D$ = Dividend per share; $E$ = Earnings per share; $r$ = Internal rate of return on reinvested funds; $K_e$ = Cost of equity capital.
+            </div>
+            <div class="formula-example">
+              <strong>Optimum Dividend Payout Rules:</strong><br>
+              • <strong>Growth Firm ($r > K_e$):</strong> Optimum payout is <strong>0%</strong> (100% retention).<br>
+              • <strong>Declining Firm ($r < K_e$):</strong> Optimum payout is <strong>100%</strong> (0% retention).<br>
+              • <strong>Normal Firm ($r = K_e$):</strong> Payout policy is indifferent.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> If $E = ₹10, K_e = 10\%, r = 15\%$, $D=0$ yields $P = ₹150$; whereas $D=10$ yields $P = ₹100$. Prove this in exam tables!
+            </div>
+          </div>
+
+          <!-- CARD FM 14: Working Capital: Operating Cycle Formulations -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Operating Cycle &amp; Holding Period Mathematics</span>
+              <span class="badge-type">MIM501 • M7</span>
+            </div>
+            <div class="formula-math-box">
+              $$GOC = R + W + F + D \quad 	ext{and} \quad NOC = GOC - C$$<br>
+              $$R = rac{	ext{Avg RM}}{	ext{RM Cons}} 	imes 365, \quad W = rac{	ext{Avg WIP}}{	ext{Cost of Prod}} 	imes 365, \quad F = rac{	ext{Avg FG}}{	ext{COGS}} 	imes 365$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $R$ = Raw Material holding; $W$ = WIP conversion; $F$ = Finished Goods storage; $D$ = Debtors collection; $C$ = Creditors deferral = $(	ext{Avg Creditors} / 	ext{Credit Purchases}) 	imes 365$.
+            </div>
+            <div class="formula-example">
+              <strong>Cycle Capital Formula:</strong> $	ext{Cycles/Yr} = 365 / NOC$. $	ext{Working Capital} = 	ext{Total Operating Cash Outflows} / 	ext{Cycles/Yr}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Be careful with denominators: RM uses RM Consumption, WIP uses Cost of Production, FG uses Cost of Goods Sold!
+            </div>
+          </div>
+
+          <!-- CARD FM 15: Cash Management: Baumol & Miller-Orr Models -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Cash Models: Baumol &amp; Miller-Orr Controls</span>
+              <span class="badge-type">MIM501 • M7</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{Baumol } C^* = \sqrt{rac{2 \cdot T \cdot F}{K}} \implies 	ext{Avg Cash} = rac{C^*}{2}$$<br>
+              $$	ext{Miller-Orr } Z = \sqrt[3]{rac{3 \cdot F \cdot \sigma^2}{4 \cdot K}} + L, \quad H = 3Z - 2L$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $T$ = Annual cash payments; $F$ = Fixed transaction brokerage cost; $K$ = Opportunity interest rate; $\sigma^2$ = Daily cash flow variance; $L$ = Lower safety limit; $Z$ = Return point; $H$ = Upper boundary.
+            </div>
+            <div class="formula-example">
+              <strong>Miller-Orr Decision Rule:</strong> When cash hits $H$, purchase $(H - Z)$ of securities. When cash depletes to $L$, liquidate $(Z - L)$ of securities.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> In Miller-Orr, the spread between upper limit and return point is exactly twice the spread between return point and lower limit ($H - Z = 2(Z - L)$).
+            </div>
+          </div>
+
+          <!-- CARD FM 16: Inventory: EOQ & ABC Analysis -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Inventory: EOQ &amp; Total Cost Equilibrium</span>
+              <span class="badge-type">MIM501 • M7</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{EOQ} = \sqrt{rac{2 \cdot A \cdot O}{C}} \quad [	ext{At EOQ: } 	ext{Annual Ordering Cost} = 	ext{Annual Carrying Cost}]$$<br>
+              $$	ext{Total Annual Inventory Cost} = \sqrt{2 \cdot A \cdot O \cdot C}$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $A$ = Annual usage units; $O$ = Fixed order placement cost; $C$ = Annual unit carrying cost ($P 	imes I\%$).
+            </div>
+            <div class="formula-example">
+              <strong>Worked Problem:</strong> $A = 10,000, O = ₹200, C = ₹16$. $	ext{EOQ} = \sqrt{(2 	imes 10,000 	imes 200)/16} = \mathbf{500	ext{ Units}}$. $	ext{Total Cost} = \sqrt{2 	imes 10,000 	imes 200 	imes 16} = \mathbf{₹8,000}$.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> ABC analysis: A items = 70% value, 10% items; B items = 20% value, 20% items; C items = 10% value, 70% items (two-bin bulk reorder).
+            </div>
+          </div>
+
+          <!-- CARD FM 17: Receivables: Cost of Forgoing Cash Discounts -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Receivables: Cost of Trade Credit &amp; 5 C's</span>
+              <span class="badge-type">MIM501 • M7</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{Annualized Cost} = rac{	ext{Discount } \%}{100 - 	ext{Discount } \%} 	imes rac{365}{	ext{Credit Period} - 	ext{Discount Period}}$$
+            </div>
+            <div class="formula-legend">
+              <strong>Terms '2/10, net 45':</strong> 2% discount if settled in 10 days; full payment due on day 45. Delaying past day 10 costs: $(2 / 98) 	imes (365 / 35) = 0.02041 	imes 10.4286 = \mathbf{21.28\% 	ext{ p.a.}}$
+            </div>
+            <div class="formula-example">
+              <strong>The 5 C's of Credit:</strong> (1) Character (morality &amp; track record); (2) Capacity (cash flow); (3) Capital (net worth); (4) Collateral (assets); (5) Conditions (macro trends).
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Forgoing a 2% cash discount is equivalent to borrowing money at an exorbitant 21.28% annual interest rate!
+            </div>
+          </div>
+
+          <!-- CARD FM 18: Tandon Committee MPBF Methods -->
+          <div class="formula-card" data-category="fm">
+            <div class="formula-header">
+              <span class="formula-title">Tandon Committee MPBF Banking Methods (1975)</span>
+              <span class="badge-type">MIM501 • M7</span>
+            </div>
+            <div class="formula-math-box">
+              $$	ext{Method 1: } 	ext{MPBF}_1 = 75\% 	imes (CA - CL) \quad [	ext{Min CR } 1.17 : 1]$$<br>
+              $$	ext{Method 2: } 	ext{MPBF}_2 = 75\% 	imes CA - CL \quad [	ext{Min CR } 1.33 : 1 	ext{ (Standard)}]$$<br>
+              $$	ext{Method 3: } 	ext{MPBF}_3 = (CA - 	ext{Core CA}) - CL \quad [	ext{Borrower funds 100% Core CA}]$$
+            </div>
+            <div class="formula-legend">
+              <strong>Where:</strong> $CA$ = Total Current Assets; $CL$ = Current Liabilities excluding bank borrowings; $WCG$ = Working Capital Gap ($CA - CL$).
+            </div>
+            <div class="formula-example">
+              <strong>Chore Committee (1980):</strong> Mandated Method 2 for all working capital limits > ₹50 Lakhs and bifurcated credit into Loan Component and Cash Credit Component.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Under Method 2, borrower margin is 25% of TOTAL CURRENT ASSETS, not 25% of Working Capital Gap!
+            </div>
+          </div>
+
+          <!-- CARD JAVA 1: Method Overriding Rules -->
+          <div class="formula-card" data-category="java">
+            <div class="formula-header">
+              <span class="formula-title">Method Overriding: 6 Invariant Rules</span>
+              <span class="badge-type">BCAC502 • M4</span>
+            </div>
+            <div class="formula-legend" style="border-left-color:var(--coral);">
+              <strong>1. Same Signature:</strong> Identical name, parameter types, order, and count.<br>
+              <strong>2. Covariant Return:</strong> Return type must be identical or a subtype (Java 5+).<br>
+              <strong>3. Access Modifier:</strong> Cannot reduce visibility (e.g. <code>protected</code> cannot become <code>package-private</code> or <code>private</code>).<br>
+              <strong>4. Checked Exceptions:</strong> Child method cannot throw new or broader checked exceptions.<br>
+              <strong>5. Non-Overridable:</strong> <code>static</code>, <code>final</code>, and <code>private</code> methods cannot be overridden.<br>
+              <strong>6. Annotation:</strong> Always annotate with <code>@Override</code> to catch compile-time typos.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Static method redeclaration in child class is <strong>Method Hiding</strong>, not method overriding!
+            </div>
+          </div>
+
+          <!-- CARD JAVA 2: String vs StringBuffer vs StringBuilder -->
+          <div class="formula-card" data-category="java">
+            <div class="formula-header">
+              <span class="formula-title">String vs StringBuffer vs StringBuilder</span>
+              <span class="badge-type">BCAC502 • M5</span>
+            </div>
+            <div class="formula-legend" style="border-left-color:var(--coral);">
+              • <strong>String:</strong> Immutable; stored in String Constant Pool (Heap); thread-safe; slow in heavy concatenation.<br>
+              • <strong>StringBuffer:</strong> Mutable; synchronized methods; thread-safe; moderate performance (Java 1.0).<br>
+              • <strong>StringBuilder:</strong> Mutable; non-synchronized; NOT thread-safe; fastest performance in single-thread loops (Java 1.5).
+            </div>
+            <div class="formula-example">
+              <strong>Equality Rule:</strong> Always compare String content using <code>s1.equals(s2)</code>. <code>==</code> tests object memory address identity!
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> <code>String s = "Sankho"</code> creates 1 object in SCP. <code>new String("Sankho")</code> creates 2 objects (Heap + SCP).
+            </div>
+          </div>
+
+          <!-- CARD PHP 1: PDO Prepared Statements -->
+          <div class="formula-card" data-category="php">
+            <div class="formula-header">
+              <span class="formula-title">PDO Prepared Statements CRUD Template</span>
+              <span class="badge-type">BCAC501 • M4</span>
+            </div>
+            <div class="formula-legend" style="border-left-color:var(--teal);">
+              <pre><code class="language-php">$dsn = "mysql:host=localhost;dbname=portal;charset=utf8mb4";
+$pdo = new PDO($dsn, "user", "pass", [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+    PDO::ATTR_EMULATE_PREPARES => false
+]);
+$stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+$stmt->execute([':email' => $email]);
+$user = $stmt->fetch();</code></pre>
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Disabling emulated prepares (<code>PDO::ATTR_EMULATE_PREPARES => false</code>) forces real binary MySQL statement preparation.
+            </div>
+          </div>
+
+          <!-- CARD PHP 2: Web Security Hygiene -->
+          <div class="formula-card" data-category="php">
+            <div class="formula-header">
+              <span class="formula-title">PHP Web Security: XSS, CSRF &amp; Password Hashing</span>
+              <span class="badge-type">BCAC501 • M7</span>
+            </div>
+            <div class="formula-legend" style="border-left-color:var(--teal);">
+              • <strong>XSS Defenses:</strong> <code>htmlspecialchars($input, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')</code><br>
+              • <strong>CSRF Guard:</strong> Generate <code>bin2hex(random_bytes(32))</code>; verify with <code>hash_equals($_SESSION['token'], $_POST['token'])</code><br>
+              • <strong>Password Hash:</strong> <code>password_hash($raw, PASSWORD_BCRYPT, ['cost' => 12])</code><br>
+              • <strong>Password Verify:</strong> <code>password_verify($candidate, $storedHash)</code><br>
+              • <strong>Session Fixation:</strong> <code>session_regenerate_id(true)</code> on login.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> Never use <code>md5()</code> or <code>sha1()</code> for passwords; both are broken by GPU rainbow tables.
+            </div>
+          </div>
+
+          <!-- CARD ENT 1: MSME Revised Composite Criteria -->
+          <div class="formula-card" data-category="ent">
+            <div class="formula-header">
+              <span class="formula-title">MSME Classification Criteria (July 1, 2020)</span>
+              <span class="badge-type">MIM502 • M5</span>
+            </div>
+            <div class="formula-legend" style="border-left-color:var(--lavender);">
+              • <strong>Micro Enterprise:</strong> Investment $\le ₹1	ext{ Crore}$ AND Turnover $\le ₹5	ext{ Crores}$<br>
+              • <strong>Small Enterprise:</strong> Investment $\le ₹10	ext{ Crores}$ AND Turnover $\le ₹50	ext{ Crores}$<br>
+              • <strong>Medium Enterprise:</strong> Investment $\le ₹50	ext{ Crores}$ AND Turnover $\le ₹250	ext{ Crores}$<br>
+              • <strong>Export Carve-Out:</strong> Turnover from export of goods or services is 100% EXCLUDED from turnover limits!
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> The 2020 revision eliminated the distinction between manufacturing and service sectors!
+            </div>
+          </div>
+
+          <!-- CARD ENT 2: Six Stages of Venture Capital -->
+          <div class="formula-card" data-category="ent">
+            <div class="formula-header">
+              <span class="formula-title">Six Stages of the Venture Capital Cycle</span>
+              <span class="badge-type">MIM502 • M4</span>
+            </div>
+            <div class="formula-legend" style="border-left-color:var(--lavender);">
+              1. <strong>Seed Stage:</strong> Concept validation &amp; prototype development ($100k-$1M).<br>
+              2. <strong>Start-Up Stage:</strong> MVP build &amp; initial market launch ($1M-$2M).<br>
+              3. <strong>Series A (First Stage):</strong> Product-market fit &amp; commercial manufacturing scale.<br>
+              4. <strong>Series B (Second Stage):</strong> Market share expansion &amp; geographic expansion.<br>
+              5. <strong>Series C / Mezzanine:</strong> Bridge funding pre-IPO or acquisitions.<br>
+              6. <strong>Exit Stage:</strong> Harvesting returns via IPO, trade acquisition, or secondary sale.
+            </div>
+            <div class="formula-tip">
+              <span>💡</span> <strong>Exam Tip:</strong> VCs follow a power-law return distribution, seeking 10x-50x exits to cover multiple portfolio failures.
             </div>
           </div>
         </div>
@@ -4860,7 +5952,159 @@ window.DATA = {"subjects": [{"id": "BCAC501", "code": "BCAC501", "name": "PHP wi
       container.innerHTML = html;
     },
 
-    // 9. SEARCH MODAL (<Ctrl+K>)
+    // 8B. CHEATSHEET TAB FILTERING & LIVE SEARCH
+    filterCheatsheet(query) {
+      const q = (query || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('.formula-card, .calc-card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (!q || text.includes(q)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    },
+
+    switchCheatsheetTab(tabName) {
+      const pills = document.querySelectorAll('.cheatsheet-pill');
+      pills.forEach(p => p.classList.toggle('active', p.getAttribute('data-tab') === tabName));
+
+      const cards = document.querySelectorAll('.formula-card, .calc-card');
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (tabName === 'all' || cat === tabName) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      const searchInput = document.getElementById('cheatsheetSearch');
+      if (searchInput) searchInput.value = '';
+    },
+
+    // 8C. INTERACTIVE LIVE MATHEMATICAL SOLVERS
+    calculateWACC() {
+      const we = parseFloat(document.getElementById('wacc_we')?.value || '0.6');
+      const ke = parseFloat(document.getElementById('wacc_ke')?.value || '14.0');
+      const wd = parseFloat(document.getElementById('wacc_wd')?.value || '0.4');
+      const kdPre = parseFloat(document.getElementById('wacc_kd_pre')?.value || '10.0');
+      const tax = parseFloat(document.getElementById('wacc_tax')?.value || '30.0');
+
+      const kdPost = kdPre * (1 - tax / 100);
+      const wacc = (we * ke) + (wd * kdPost);
+
+      const resBox = document.getElementById('waccResult');
+      if (resBox) {
+        resBox.innerHTML = `
+          <strong>Calculation Results &amp; Step-by-Step Substitution:</strong><br>
+          • <strong>Post-Tax Cost of Debt (Kd):</strong> ${kdPre}% × (1 - ${tax/100}) = <strong>${kdPost.toFixed(2)}%</strong><br>
+          • <strong>Equity Contribution:</strong> ${we} × ${ke}% = <strong>${(we * ke).toFixed(2)}%</strong><br>
+          • <strong>Debt Contribution:</strong> ${wd} × ${kdPost.toFixed(2)}% = <strong>${(wd * kdPost).toFixed(2)}%</strong><br>
+          • <strong>Weighted Average Cost of Capital (WACC / Ko):</strong> <strong>${wacc.toFixed(2)}%</strong><br>
+          <div style="margin-top:0.5rem; font-size:0.85rem; color:#1e293b;">
+            <em>Managerial Benchmark:</em> Any capital investment project must yield an Internal Rate of Return (IRR) exceeding <strong>${wacc.toFixed(2)}%</strong> to enhance shareholder wealth.
+          </div>
+        `;
+        resBox.style.display = 'block';
+      }
+    },
+
+    calculateOperatingCycle() {
+      const r = parseFloat(document.getElementById('occ_r')?.value || '40');
+      const w = parseFloat(document.getElementById('occ_w')?.value || '20');
+      const f = parseFloat(document.getElementById('occ_f')?.value || '30');
+      const d = parseFloat(document.getElementById('occ_d')?.value || '45');
+      const c = parseFloat(document.getElementById('occ_c')?.value || '35');
+      const cost = parseFloat(document.getElementById('occ_cost')?.value || '7200000');
+
+      const goc = r + w + f + d;
+      const noc = goc - c;
+      const cycles = noc > 0 ? (365 / noc) : 0;
+      const wcReq = cycles > 0 ? (cost / cycles) : 0;
+
+      const resBox = document.getElementById('occResult');
+      if (resBox) {
+        resBox.innerHTML = `
+          <strong>Operating Cycle Diagnostic Results:</strong><br>
+          • <strong>Gross Operating Cycle (GOC):</strong> ${r}d (RM) + ${w}d (WIP) + ${f}d (FG) + ${d}d (Debtors) = <strong>${goc.toFixed(1)} Days</strong><br>
+          • <strong>Less Creditors Deferral Period (C):</strong> -${c} Days<br>
+          • <strong>Net Operating Cycle (NOC / CCC):</strong> <strong>${noc.toFixed(1)} Days</strong><br>
+          • <strong>Operating Cash Cycles per Year:</strong> 365 / ${noc.toFixed(1)} = <strong>${cycles.toFixed(2)} Cycles</strong><br>
+          • <strong>Estimated Net Working Capital Needed:</strong> ₹${cost.toLocaleString('en-IN')} / ${cycles.toFixed(2)} = <strong>₹${Math.round(wcReq).toLocaleString('en-IN')}</strong><br>
+          <div style="margin-top:0.5rem; font-size:0.85rem; color:#1e293b;">
+            <em>Treasury Interpretation:</em> The enterprise requires a liquid working capital buffer or bank credit line of <strong>₹${Math.round(wcReq).toLocaleString('en-IN')}</strong> to sustain operations across its ${noc.toFixed(0)}-day cash-to-cash financing gap.
+          </div>
+        `;
+        resBox.style.display = 'block';
+      }
+    },
+
+    calculateEOQ() {
+      const a = parseFloat(document.getElementById('eoq_a')?.value || '10000');
+      const o = parseFloat(document.getElementById('eoq_o')?.value || '200');
+      const p = parseFloat(document.getElementById('eoq_p')?.value || '100');
+      const i = parseFloat(document.getElementById('eoq_i')?.value || '16');
+
+      const c = p * (i / 100);
+      const eoq = Math.sqrt((2 * a * o) / c);
+      const orders = a / eoq;
+      const annualOrderingCost = orders * o;
+      const annualCarryingCost = (eoq / 2) * c;
+      const totalCost = annualOrderingCost + annualCarryingCost;
+
+      const resBox = document.getElementById('eoqResult');
+      if (resBox) {
+        resBox.innerHTML = `
+          <strong>EOQ Inventory Optimization Output:</strong><br>
+          • <strong>Carrying Cost per Unit/Year (C):</strong> ${i}% × ₹${p} = <strong>₹${c.toFixed(2)}</strong><br>
+          • <strong>Economic Order Quantity (EOQ):</strong> √[(2 × ${a} × ₹${o}) / ₹${c.toFixed(2)}] = <strong>${Math.round(eoq)} Units</strong><br>
+          • <strong>Optimum Orders per Year:</strong> ${a} / ${Math.round(eoq)} = <strong>${orders.toFixed(1)} Orders</strong> (every ${(365 / orders).toFixed(0)} days)<br>
+          • <strong>Annual Ordering Cost:</strong> ${orders.toFixed(1)} × ₹${o} = <strong>₹${Math.round(annualOrderingCost).toLocaleString('en-IN')}</strong><br>
+          • <strong>Annual Carrying Cost:</strong> (${Math.round(eoq)} / 2) × ₹${c.toFixed(2)} = <strong>₹${Math.round(annualCarryingCost).toLocaleString('en-IN')}</strong><br>
+          • <strong>Total Annual Inventory Management Cost:</strong> <strong>₹${Math.round(totalCost).toLocaleString('en-IN')}</strong><br>
+          <div style="margin-top:0.5rem; font-size:0.85rem; color:#1e293b;">
+            <em>Inventory Equilibrium:</em> At mathematical EOQ, Annual Ordering Cost (₹${Math.round(annualOrderingCost)}) equals Annual Carrying Cost (₹${Math.round(annualCarryingCost)}), achieving absolute global cost minimization.
+          </div>
+        `;
+        resBox.style.display = 'block';
+      }
+    },
+
+    calculateLeverage() {
+      const sales = parseFloat(document.getElementById('lev_sales')?.value || '2000000');
+      const vc = parseFloat(document.getElementById('lev_vc')?.value || '1200000');
+      const fc = parseFloat(document.getElementById('lev_fc')?.value || '400000');
+      const interest = parseFloat(document.getElementById('lev_int')?.value || '100000');
+
+      const contribution = sales - vc;
+      const ebit = contribution - fc;
+      const ebt = ebit - interest;
+
+      const dol = ebit > 0 ? (contribution / ebit) : 0;
+      const dfl = ebt > 0 ? (ebit / ebt) : 0;
+      const dcl = ebt > 0 ? (contribution / ebt) : 0;
+
+      const resBox = document.getElementById('levResult');
+      if (resBox) {
+        resBox.innerHTML = `
+          <strong>Leverage &amp; Risk Profiling Results:</strong><br>
+          • <strong>Sales:</strong> ₹${sales.toLocaleString('en-IN')} | <strong>Variable Cost:</strong> ₹${vc.toLocaleString('en-IN')} | <strong>Contribution:</strong> ₹${contribution.toLocaleString('en-IN')}<br>
+          • <strong>Operating Profit (EBIT):</strong> ₹${contribution.toLocaleString('en-IN')} - ₹${fc.toLocaleString('en-IN')} = <strong>₹${ebit.toLocaleString('en-IN')}</strong><br>
+          • <strong>Earnings Before Tax (EBT):</strong> ₹${ebit.toLocaleString('en-IN')} - ₹${interest.toLocaleString('en-IN')} = <strong>₹${ebt.toLocaleString('en-IN')}</strong><br>
+          • <strong>Degree of Operating Leverage (DOL):</strong> Contribution / EBIT = <strong>${dol.toFixed(2)}x</strong><br>
+          • <strong>Degree of Financial Leverage (DFL):</strong> EBIT / EBT = <strong>${dfl.toFixed(2)}x</strong><br>
+          • <strong>Degree of Combined Leverage (DCL):</strong> DOL × DFL = <strong>${dcl.toFixed(2)}x</strong><br>
+          <div style="margin-top:0.5rem; font-size:0.85rem; color:#1e293b;">
+            <em>Financial Risk Diagnosis:</em> A DCL of <strong>${dcl.toFixed(2)}x</strong> indicates that every 1% change in sales volume will amplify Earnings Per Share (EPS) by <strong>${dcl.toFixed(2)}%</strong> in either direction.
+          </div>
+        `;
+        resBox.style.display = 'block';
+      }
+    },
+
+        // 9. SEARCH MODAL (<Ctrl+K>)
     bindSearchModal() {
       const modal = document.getElementById('searchModalOverlay');
       const input = document.getElementById('globalSearchInput');
