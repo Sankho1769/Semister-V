@@ -881,121 +881,664 @@ body {
 }
 
 /* ========================================================
-   INNER PAGE HEADER CARDS (Image 1 Style Reference)
+   UNIVERSAL HERO HEADERS & INNER PAGE COLOR SCHEME
+   (Universal Landing Page Theme across ALL Pages)
    ======================================================== */
-.academic-page-header:not(.home-hero-card),
-.hero-card:not(.home-hero-card) {
-  background: radial-gradient(circle at top right, rgba(8, 117, 249, 0.05) 0%, transparent 60%), #FFFFFF !important;
-  border: 1px solid var(--border-default) !important;
-  border-radius: var(--radius-lg) !important;
-  padding: 2rem 2.25rem !important;
-  margin-bottom: 2rem !important;
-  box-shadow: var(--shadow-sm) !important;
+.hero-card,
+.academic-page-header,
+.module-header-card {
+  background: linear-gradient(135deg, #0267F2 0%, #0875F9 45%, #6A4FF2 100%) !important;
+  border-radius: var(--radius-xl) !important;
+  padding: 2.5rem 2.5rem 2.25rem !important;
+  color: #FFFFFF !important;
   position: relative !important;
   overflow: hidden !important;
-  color: var(--navy-dark) !important;
+  border: none !important;
+  box-shadow: var(--shadow-hero) !important;
+  margin-bottom: 2rem !important;
+  box-sizing: border-box !important;
 }
 
-.academic-page-header:not(.home-hero-card) .page-title,
-.academic-page-header:not(.home-hero-card) .hero-title,
-.hero-card:not(.home-hero-card) .page-title,
-.hero-card:not(.home-hero-card) .hero-title {
-  font-size: 1.85rem !important;
+/* Subtle Isometric and Fluid Wave Background Decorations for ALL Heros */
+.hero-card::before,
+.academic-page-header::before,
+.module-header-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 480px;
+  height: 220px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 480 220' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='rgba(255,255,255,0.08)' stroke-width='1.2'%3E%3Cpath d='M320,15 L370,40 L370,100 L320,75 Z M370,40 L420,15 L420,75 L370,100 Z M320,15 L370,-10 L420,15 L370,40 Z'/%3E%3Cpath d='M370,100 L420,125 L420,185 L370,160 Z M420,125 L470,100 L470,160 L420,185 Z M370,100 L420,75 L470,100 L420,125 Z'/%3E%3Cpath d='M270,85 L320,110 L320,170 L270,145 Z M320,110 L370,85 L370,145 L320,170 Z M270,85 L320,60 L370,85 L320,110 Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: top right;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-card::after,
+.academic-page-header::after,
+.module-header-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 80' preserveAspectRatio='none' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,35 C250,75 420,10 650,45 C850,75 950,25 1000,40 L1000,80 L0,80 Z' fill='rgba(255,255,255,0.06)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Typography across ALL Hero Headers */
+.academic-page-header .page-title,
+.academic-page-header .hero-title,
+.hero-card .page-title,
+.hero-card .hero-title,
+.module-header-card .hero-title {
+  font-size: 2.15rem !important;
   font-weight: 800 !important;
-  color: var(--navy-dark) !important;
+  color: #FFFFFF !important;
   line-height: 1.25 !important;
-  margin: 0 0 0.5rem 0 !important;
+  margin: 0 0 0.65rem 0 !important;
   letter-spacing: -0.02em !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
-.academic-page-header:not(.home-hero-card) .page-subtitle,
-.academic-page-header:not(.home-hero-card) .hero-subtitle,
-.hero-card:not(.home-hero-card) .page-subtitle,
-.hero-card:not(.home-hero-card) .hero-subtitle {
+.academic-page-header .page-subtitle,
+.academic-page-header .hero-subtitle,
+.hero-card .page-subtitle,
+.hero-card .hero-subtitle,
+.module-header-card .hero-subtitle {
   font-size: 0.95rem !important;
-  color: var(--text-secondary) !important;
-  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  line-height: 1.62 !important;
   margin: 0 !important;
   max-width: 820px !important;
   font-weight: 400 !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
-.academic-page-header:not(.home-hero-card) .header-badge-pill,
-.academic-page-header:not(.home-hero-card) .hero-meta,
-.hero-card:not(.home-hero-card) .header-badge-pill,
-.hero-card:not(.home-hero-card) .hero-meta {
-  background: #EEF2FF !important;
-  color: #4F46E5 !important;
-  border: 1px solid #E0E7FF !important;
-  padding: 4px 12px !important;
+/* Eyebrows & Badges inside Hero Headers */
+.academic-page-header .header-badge-pill,
+.academic-page-header .hero-meta,
+.academic-page-header .hero-eyebrow-pill,
+.hero-card .header-badge-pill,
+.hero-card .hero-meta,
+.hero-card .hero-eyebrow-pill,
+.module-header-card .header-badge-pill,
+.module-header-card .hero-meta {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.32) !important;
+  color: #FFFFFF !important;
   border-radius: var(--radius-pill) !important;
+  padding: 5px 14px !important;
   font-size: 0.75rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.05em !important;
+  letter-spacing: 0.06em !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 6px !important;
-  margin-bottom: 0.65rem !important;
+  margin-bottom: 0.85rem !important;
+  backdrop-filter: blur(8px) !important;
+  position: relative !important;
+  z-index: 2 !important;
   text-transform: uppercase !important;
 }
 
-.hero-side-card {
-  background: #F8FAFC !important;
-  border: 1px solid var(--border-default) !important;
-  border-radius: var(--radius-md) !important;
-  padding: 1.25rem !important;
+/* Subject Tag and Status Badges inside Hero Headers */
+.hero-card .badge-marks,
+.hero-card .badge-type,
+.hero-card .tag-badge {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  padding: 4px 12px !important;
+  border-radius: 20px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  backdrop-filter: blur(6px) !important;
+  position: relative !important;
+  z-index: 2 !important;
 }
 
-.badge-marks {
-  background: var(--sub-php-bg) !important;
-  color: var(--primary-blue) !important;
-  padding: 3px 10px !important;
-  border-radius: 6px !important;
+.hero-card .subject-top {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  margin-bottom: 0.5rem !important;
+  flex-wrap: wrap !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.hero-card .subject-badge {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
   font-size: 0.75rem !important;
   font-weight: 700 !important;
 }
 
-.badge-type {
-  background: var(--sub-java-bg) !important;
-  color: var(--royal-violet) !important;
-  padding: 3px 10px !important;
-  border-radius: 6px !important;
-  font-size: 0.75rem !important;
-  font-weight: 700 !important;
+.hero-card .subject-code {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
 }
 
-@media (max-width: 1100px) {
-  .hero-metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+.hero-card .lesson-breadcrumbs {
+  margin-bottom: 0.75rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.hero-card .lesson-breadcrumbs a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.hero-card .lesson-breadcrumbs span {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Inner Page Hero 2-Column Layout (Model Exams, Practicals, Cheatsheet) */
+.hero-layout {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 2rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 992px) {
+  .hero-layout {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1.25rem !important;
   }
+}
+
+.hero-content {
+  flex: 1 1 580px !important;
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Crisp White Stat Side Cards on Inner Pages */
+.hero-side-card {
+  flex: 0 0 340px !important;
+  max-width: 380px !important;
+  background: #FFFFFF !important;
+  border-radius: 16px !important;
+  padding: 1.25rem 1.4rem !important;
+  box-shadow: 0 10px 30px rgba(6, 40, 110, 0.15) !important;
+  color: var(--navy-dark) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 992px) {
+  .hero-side-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    flex: 1 1 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-card,
+  .academic-page-header,
+  .module-header-card {
+    padding: 1.25rem 1rem !important;
+    border-radius: 14px !important;
+  }
+  .hero-side-card {
+    padding: 1rem 0.85rem !important;
+    border-radius: 12px !important;
+  }
+}
+
+.hero-side-card > div:first-child {
+  font-size: 0.75rem !important;
+  font-weight: 800 !important;
+  color: var(--text-secondary) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.hero-side-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.hero-side-stat {
+  background: var(--bg-page) !important;
+  border-radius: 10px !important;
+  padding: 0.75rem 0.85rem !important;
+  text-align: center !important;
+  border: 1px solid var(--border-subtle) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.hero-side-stat-num {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  color: var(--primary-blue) !important;
+  line-height: 1.2 !important;
+  display: block !important;
+}
+
+.hero-side-stat-label {
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  color: var(--text-secondary) !important;
+  margin-top: 3px !important;
+  display: block !important;
+}
+
+.hero-side-footer {
+  font-size: 0.75rem !important;
+  color: var(--text-secondary) !important;
+  text-align: center !important;
+  padding-top: 0.5rem !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Syllabus Matrix 4 Stat Cards inside Hero */
+.hero-stats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.15rem !important;
+  margin-top: 1.75rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 992px) {
+  .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.stat-card {
+  background: #FFFFFF !important;
+  border-radius: 14px !important;
+  padding: 0.9rem 1.15rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  box-shadow: 0 6px 20px rgba(16, 27, 61, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  color: var(--navy-dark) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px rgba(16, 27, 61, 0.12) !important;
+}
+
+.stat-card .stat-icon {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  background: #EBF3FF !important;
+  color: var(--primary-blue) !important;
+}
+
+.stat-card .stat-num {
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  color: var(--navy-dark) !important;
+  line-height: 1.2 !important;
+}
+
+.stat-card .stat-label {
+  font-size: 0.78rem !important;
+  font-weight: 500 !important;
+  color: var(--text-secondary) !important;
+  line-height: 1.25 !important;
+  margin-top: 2px !important;
+}
+
+/* ========================================================
+   UNIVERSAL FILTER BARS & SEGMENTED CONTROLS
+   ======================================================== */
+.exam-filter-bar,
+.practical-filter-bar,
+.matrix-filter-bar,
+.cheatsheet-tabs,
+.filter-bar,
+.module-nav-tabs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 1.75rem !important;
+  padding: 0.6rem 0.85rem !important;
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 10px rgba(16, 27, 61, 0.04) !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.filter-pill,
+.matrix-filter-pill,
+.cheatsheet-tab-btn,
+.tab-pill,
+.module-nav-tab,
+.subtab-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  color: var(--navy-dark) !important;
+  background: #F4F7FE !important;
+  border: 1px solid var(--border-subtle) !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+}
+
+@media (max-width: 640px) {
+  .exam-filter-bar,
+  .practical-filter-bar,
+  .matrix-filter-bar,
+  .cheatsheet-tabs,
+  .filter-bar,
+  .module-nav-tabs {
+    gap: 0.4rem !important;
+    padding: 0.5rem !important;
+  }
+  .filter-pill,
+  .matrix-filter-pill,
+  .cheatsheet-tab-btn,
+  .tab-pill,
+  .module-nav-tab,
+  .subtab-btn {
+    padding: 6px 12px !important;
+    font-size: 0.75rem !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    line-height: 1.3 !important;
+  }
+}
+
+.filter-pill:hover,
+.matrix-filter-pill:hover,
+.cheatsheet-tab-btn:hover,
+.tab-pill:hover,
+.module-nav-tab:hover,
+.subtab-btn:hover {
+  background: #EBF3FF !important;
+  color: var(--primary-blue) !important;
+  border-color: #C8DDFF !important;
+  transform: translateY(-1px) !important;
+}
+
+.filter-pill.active,
+.matrix-filter-pill.active,
+.cheatsheet-tab-btn.active,
+.tab-pill.active,
+.module-nav-tab.active,
+.subtab-btn.active {
+  background: var(--primary-blue) !important;
+  color: #FFFFFF !important;
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 4px 12px rgba(8, 117, 249, 0.25) !important;
+}
+
+/* ========================================================
+   UNIVERSAL BREADCRUMBS
+   ======================================================== */
+.lesson-breadcrumbs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  color: var(--text-secondary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.lesson-breadcrumbs a {
+  color: var(--primary-blue) !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: color 0.2s ease !important;
+}
+
+.lesson-breadcrumbs a:hover {
+  color: var(--deep-blue) !important;
+  text-decoration: underline !important;
+}
+
+.lesson-breadcrumbs span {
+  color: var(--text-secondary) !important;
+}
+
+/* ========================================================
+   EXAM QUESTION CARDS & ACCORDIONS
+   ======================================================== */
+.exam-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 14px !important;
+  margin-bottom: 1rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(16, 27, 61, 0.04) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease !important;
+}
+
+.exam-card:hover {
+  border-color: rgba(8, 117, 249, 0.3) !important;
+  box-shadow: 0 6px 18px rgba(16, 27, 61, 0.08) !important;
+}
+
+.exam-card-header {
+  padding: 1.15rem 1.4rem !important;
+  background: #FFFFFF !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease !important;
+}
+
+.exam-card-header:hover {
+  background: #F8FAFD !important;
+}
+
+.exam-card-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.85rem !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--navy-dark) !important;
+}
+
+.exam-card-body {
+  padding: 1.5rem !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  background: #FAFCFE !important;
+}
+
+/* ========================================================
+   SYLLABUS MATRIX TABLE
+   ======================================================== */
+.matrix-table-wrap {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(16, 27, 61, 0.05) !important;
+  margin-bottom: 2rem !important;
+}
+
+.matrix-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+}
+
+.matrix-table th {
+  background: #F4F7FE !important;
+  color: var(--navy-dark) !important;
+  font-size: 0.78rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 1rem 1.15rem !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  text-align: left !important;
+}
+
+.matrix-table td {
+  padding: 0.95rem 1.15rem !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  font-size: 0.84rem !important;
+  color: var(--navy-dark) !important;
+}
+
+.matrix-table tr:hover td {
+  background: #F8FAFD !important;
+}
+
+.matrix-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+.matrix-table a.btn,
+.matrix-table .btn {
+  background: var(--primary-blue) !important;
+  color: #FFFFFF !important;
+  padding: 5px 12px !important;
+  border-radius: 6px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: all 0.2s ease !important;
+}
+
+.matrix-table a.btn:hover,
+.matrix-table .btn:hover {
+  filter: brightness(1.1) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ========================================================
+   FORMULA CHEATSHEET & SOLVERS
+   ======================================================== */
+.solver-card {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 14px !important;
+  padding: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: 0 2px 10px rgba(16, 27, 61, 0.04) !important;
+}
+
+.solver-input,
+.formula-calc-input,
+input[type="number"],
+input[type="text"] {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  font-size: 0.88rem !important;
+  color: var(--navy-dark) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.solver-input:focus,
+.formula-calc-input:focus,
+input[type="number"]:focus,
+input[type="text"]:focus {
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 0 0 3px rgba(8, 117, 249, 0.15) !important;
+  outline: none !important;
+}
+
+.solver-btn,
+.formula-calc-btn {
+  background: var(--primary-blue) !important;
+  color: #FFFFFF !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  padding: 8px 16px !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.solver-btn:hover,
+.formula-calc-btn:hover {
+  filter: brightness(1.08) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(8, 117, 249, 0.25) !important;
 }
 
 @media (max-width: 991px) {
-  .home-hero-content-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .home-hero-right {
-    max-width: 100%;
-    width: 100%;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  .hero-illustration-svg {
-    max-width: 320px;
+  .hero-card,
+  .academic-page-header,
+  .module-header-card {
+    padding: 2rem 1.5rem 1.75rem !important;
   }
 }
 
 @media (max-width: 640px) {
-  .home-hero-card {
+  .hero-card,
+  .academic-page-header,
+  .module-header-card {
     padding: 1.75rem 1.25rem 1.5rem !important;
   }
-  .home-hero-card .hero-title {
+  .hero-card .hero-title,
+  .academic-page-header .hero-title,
+  .module-header-card .hero-title {
     font-size: 1.75rem !important;
-  }
-  .hero-metrics-grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
   }
 }
 

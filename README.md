@@ -60,8 +60,12 @@ Engineered in strict accordance with the **Sankho Academic Design Specification*
   - Prominent title with warm gold accent: `Academic Learning & Examination Portal`.
   - Academic 3D artwork composition featuring an angled metallic laptop with bright blue screen displaying a white graduation cap with golden-yellow tassel, a ceramic succulent planter, a 3-book textbook stack, and a standing checklist clipboard.
   - Four embedded metric cards across the bottom: `192 Topics` (Blue), `290 Q&As` (Violet), `290 MCQs` (Green), and `12 Labs` (Orange).
-- **Standardized Inner Page Headers (Image 1 Style Reference)**:
-  - Clean white surface cards (`#FFFFFF`) with soft top-right radial blue aura (`rgba(8, 117, 249, 0.05)`), border (`#DCE5F2`), rounded 16px corners, and soft blue/violet pill badges across all model exams, matrices, labs, cheatsheets, and assessment views.
+- **Universal Landing Page Theme Across All Pages**:
+  - The signature Blue-to-Violet gradient identity (`linear-gradient(135deg, #0267F2 0%, #0875F9 45%, #6A4FF2 100%)`) from the landing page is systematically applied across every single page and view in the platform.
+  - **Signature Gradient Banners**: Syllabus Matrix, Model University Exams, Practical Laboratories, Formula Cheatsheet & Solvers, Subject Portals, and Module Views feature the rich blue-to-violet gradient header with isometric mesh geometry, fluid wave curves, translucent frosted-glass badges, and crisp white typography.
+  - **Crisp White Side Metric Panels**: Dedicated 2-column hero layouts embedding pure white stat cards (`#FFFFFF`, rounded 16px, soft shadow) with deep navy figures and slate labels.
+  - **Segmented Filter Pill Navigation**: Clean floating pill chip controls styled in `#F4F7FE` with subtle borders and `#0875F9` active states for instant subject filtering.
+  - **Consistent Surface Architecture**: Pure white content cards (`#FFFFFF`) resting on `#F4F7FE` canvas with restrained `#DCE5F2` borders across all question accordions, lab case studies, interactive solvers, and tables.
 
 ![Academic Model Examination System](docs/images/sankho_model_exams.png)
 
@@ -113,13 +117,13 @@ Every concept is broken into a standalone granular lesson adhering to Bloom's Re
 ---
 
 ### 7. Structured Academic Subject & Module Catalog
-Clear hierarchical progression: **Subject → Module → Granular Lesson → Practice & Examination**. Allows effortless syllabus browsing with progress tracking and direct assessment entry points.
+Clear hierarchical progression: **Subject → Module → Granular Lesson → Practice & Examination**. Allows effortless syllabus browsing with progress tracking and direct assessment entry points, unified with the signature blue-to-violet banner theme.
 
-![Subject Curriculum View](docs/images/academic_subject_1440.png)
+![Subject Curriculum View](docs/images/sankho_subject_view.png)
 
 <br/>
 
-![Module Curriculum & Assessment View](docs/images/academic_module_1440.png)
+![Module Curriculum & Assessment View](docs/images/sankho_module_view.png)
 
 ---
 
