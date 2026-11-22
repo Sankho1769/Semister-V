@@ -1,0 +1,283 @@
+{
+  "timestamp": "2026-11-22T06:10:22.467Z",
+  "testsRun": 55,
+  "testsPassed": 55,
+  "testsFailed": 0,
+  "results": [
+    {
+      "name": "Page Title matches university syllabus",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Prescribed 4 theory subjects present",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Prescribed 29 syllabus modules present",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Granular syllabus lessons present (192)",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Module written questions bank (290 = 10 per module)",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Module MCQ assessment bank (290 = 10 per module)",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Model university exam questions (40 = 10 per subject)",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Practical laboratory projects (12 = 6 per paper)",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Interactive topic assessment quizzes (84 = 21 per subject)",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Syllabus coverage matrix entries (29 modules)",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Route #home renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Academic Learning & Examination Portal\""
+    },
+    {
+      "name": "Route #curriculum renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Academic Learning & Examination Portal\""
+    },
+    {
+      "name": "Route #dashboard renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Academic Learning & Examination Portal\""
+    },
+    {
+      "name": "Route #syllabus-matrix renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Sankho Semester V Syllabus Coverage\""
+    },
+    {
+      "name": "Route #matrix renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Sankho Semester V Syllabus Coverage\""
+    },
+    {
+      "name": "Route #exams renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Model Examination Questions & Answers\""
+    },
+    {
+      "name": "Route #model-exams renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Model Examination Questions & Answers\""
+    },
+    {
+      "name": "Route #practicals renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Prescribed Practical Laboratory Projects\""
+    },
+    {
+      "name": "Route #laboratories renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Prescribed Practical Laboratory Projects\""
+    },
+    {
+      "name": "Route #quiz renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"University Syllabus Quiz Engine\""
+    },
+    {
+      "name": "Route #assessments renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"University Syllabus Quiz Engine\""
+    },
+    {
+      "name": "Route #bookmarks renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Bookmarked Academic Content\""
+    },
+    {
+      "name": "Route #formula-sheet renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Academic Formula & Rapid Revision Reference\""
+    },
+    {
+      "name": "Route #cheatsheet renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Academic Formula & Rapid Revision Reference\""
+    },
+    {
+      "name": "Route #subject/BCAC501 renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"PHP with MySQL\""
+    },
+    {
+      "name": "Route #module/BCAC501/M1 renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Introduction to Web Development & Environment Setu\""
+    },
+    {
+      "name": "Route #topic/BCAC501-M1-L01 renders correctly",
+      "status": "PASS",
+      "details": "Rendered: \"Web Architecture, Client-Server Communication & HT\""
+    },
+    {
+      "name": "Curriculum nav remains active on topic page",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Clicking outline link stays on lesson page",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Mark lesson as complete updates Storage and button UI",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Bookmark lesson updates Storage and button UI",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Bookmarked lesson displays in Bookmarks page",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Search modal opens via trigger",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Search surfaces Subject Course badge for \"financial management\"",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Search safely entity-escapes user input (no raw HTML tags)",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "MCQ Practice Mode provides instant academic explanation",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "MCQ Assessment Mode loads focus stepper",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Assessment Mode palette marks question as answered",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "MCQ Assessment submits and displays scorecard circle (8/10)",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Retry Incorrect Questions button appears when score < 10",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Targeted Mastery session begins with exactly 2 missed questions",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Quiz live score banner updates after answering",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Quiz score persists into LocalStorage",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Practical laboratory renders 6 case studies",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "One-click Copy Code buttons present on all labs",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "App handles corrupted LocalStorage gracefully without throwing",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Viewport Small mobile (320x700): 0 horizontal overflow across 12 routes",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Viewport Mobile (375x812): 0 horizontal overflow across 12 routes",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Viewport Large mobile (430x932): 0 horizontal overflow across 12 routes",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Viewport Tablet (768x1024): 0 horizontal overflow across 12 routes",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Viewport Large tablet (1024x768): 0 horizontal overflow across 12 routes",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Viewport Laptop (1280x800): 0 horizontal overflow across 12 routes",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Viewport Desktop (1440x900): 0 horizontal overflow across 12 routes",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Viewport Large desktop (1920x1080): 0 horizontal overflow across 12 routes",
+      "status": "PASS",
+      "details": ""
+    },
+    {
+      "name": "Zero uncaught JavaScript exceptions during audit run",
+      "status": "PASS",
+      "details": ""
+    }
+  ]
+}

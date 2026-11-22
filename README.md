@@ -25,7 +25,7 @@ The platform bridges academic rigor with modern instructional design, offering a
 ### 1. Home Dashboard & Academic Metrics
 The central dashboard provides instantaneous syllabus navigation, resume-reading capability, curriculum completion analytics, and quick-access cards across all theory and practical subjects.
 
-![Sankho Portal Dashboard](docs/images/desktop_1440.png)
+![Sankho Portal Academic Dashboard](docs/images/academic_dashboard_1440.png)
 
 ---
 
@@ -39,28 +39,28 @@ Redesigned with two-column responsive glassmorphic layouts, ambient gradient bac
 ### 3. Comprehensive Financial Management Mathematics & Interactive Solvers
 Exhaustive mathematical formulations for **MIM501: Financial Management** across all 7 syllabus modules. Includes KaTeX LaTeX equations, variable definitions, university exam tips, and 4 live step-by-step calculation engines (WACC, Operating Cycle, EOQ, and Financial/Operating Leverage).
 
-![Financial Mathematics Cheatsheet & Live Solvers](docs/images/cheatsheet_math_1440.png)
+![Financial Mathematics Cheatsheet & Live Solvers](docs/images/academic_cheatsheet_1440.png)
 
 ---
 
 ### 4. 29-Module Syllabus Traceability Matrix
 Every syllabus topic and subtopic is mapped with complete traceability across subject codes, module titles, prescribed lecture hours, and textbook references.
 
-![Syllabus Traceability Matrix](docs/images/rebuilt_matrix_1440.png)
+![Syllabus Traceability Matrix](docs/images/academic_syllabus_matrix_1440.png)
 
 ---
 
 ### 5. 11-Part Granular Digital Textbook Lessons
 Every concept is broken into a standalone granular lesson adhering to Bloom's Revised Taxonomy, complete with theoretical underpinnings, custom SVG architecture diagrams, runnable code examples, edge cases, and viva voce preparation.
 
-![11-Part Digital Textbook Lesson](docs/images/rebuilt_topic_1440.png)
+![Digital Textbook Lesson Reader](docs/images/academic_lesson_reader_1440.png)
 
 ---
 
 ### 6. Dual-Mode Module-Wise MCQ Assessment Engine
 10 rigorous multiple-choice questions for every single syllabus module (290 MCQs total). Features **Practice Mode** with instant explanations and distractor analysis, and **Assessment Mode** with a timed focus stepper, question palette, circular scorecard, and a **Targeted Mastery Retry Workflow** for missed questions.
 
-![Module MCQ Assessment Engine](docs/images/audit_mcq_1440.png)
+![Module MCQ Assessment Engine](docs/images/academic_mcq_assessment_1440.png)
 
 ---
 
@@ -68,9 +68,9 @@ Every concept is broken into a standalone granular lesson adhering to Bloom's Re
 Fully responsive across all screen widths down to 320px mobile viewports with zero horizontal scroll overflow, collapsible navigation drawer, and touch-friendly controls.
 
 <div align="center">
-  <img src="docs/images/mobile_375.png" alt="Mobile Responsive Viewport" width="320" />
+  <img src="docs/images/academic_mobile_375.png" alt="Mobile Responsive Academic Dashboard" width="320" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="docs/images/mcq_mobile_375.png" alt="Mobile MCQ Assessment" width="320" />
+  <img src="docs/images/academic_mobile_exams_375.png" alt="Mobile Responsive Model Exams" width="320" />
 </div>
 
 ---
