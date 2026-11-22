@@ -1359,50 +1359,638 @@ body {
 }
 
 /* ========================================================
-   EXAM QUESTION CARDS & ACCORDIONS
+   QUESTIONS & ANSWERS COMPLETE DESIGN SYSTEM & UI/UX
+   (Enhanced Colors, Card Hierarchy, 6-Part Color Architecture)
    ======================================================== */
-.exam-card {
-  background: #FFFFFF !important;
-  border: 1px solid var(--border-subtle) !important;
-  border-radius: 14px !important;
-  margin-bottom: 1rem !important;
-  overflow: hidden !important;
-  box-shadow: 0 2px 8px rgba(16, 27, 61, 0.04) !important;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease !important;
-}
 
-.exam-card:hover {
-  border-color: rgba(8, 117, 249, 0.3) !important;
-  box-shadow: 0 6px 18px rgba(16, 27, 61, 0.08) !important;
-}
-
-.exam-card-header {
-  padding: 1.15rem 1.4rem !important;
-  background: #FFFFFF !important;
+/* Questions Toolbar & Real-Time Filter */
+.questions-toolbar {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  cursor: pointer !important;
-  transition: background 0.2s ease !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 1.5rem !important;
+  padding: 0.85rem 1.25rem !important;
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 10px rgba(16, 27, 61, 0.04) !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
-.exam-card-header:hover {
-  background: #F8FAFD !important;
-}
-
-.exam-card-title {
+.questions-search-box {
   display: flex !important;
   align-items: center !important;
-  gap: 0.85rem !important;
-  font-size: 1.05rem !important;
+  gap: 0.6rem !important;
+  background: #F4F7FE !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 10px !important;
+  padding: 8px 14px !important;
+  flex: 1 1 280px !important;
+  max-width: 480px !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease !important;
+}
+
+.questions-search-box:focus-within {
+  border-color: var(--primary-blue) !important;
+  background: #FFFFFF !important;
+  box-shadow: 0 0 0 3px rgba(8, 117, 249, 0.12) !important;
+}
+
+.questions-search-box input {
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  font-size: 0.875rem !important;
+  color: var(--navy-dark) !important;
+  width: 100% !important;
+  font-family: inherit !important;
+}
+
+.questions-search-box input::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+.questions-search-box svg {
+  color: var(--text-secondary) !important;
+  flex-shrink: 0 !important;
+}
+
+.questions-actions-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  flex-wrap: wrap !important;
+}
+
+.qa-stat-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #F4F7FE !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 8px !important;
+  padding: 6px 12px !important;
+  font-size: 0.8125rem !important;
   font-weight: 700 !important;
   color: var(--navy-dark) !important;
 }
 
-.exam-card-body {
+.btn-qa-action {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 6px 14px !important;
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 8px !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  color: var(--navy-dark) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  user-select: none !important;
+}
+
+.btn-qa-action:hover {
+  background: #F4F7FE !important;
+  border-color: #B8D3F9 !important;
+  color: var(--primary-blue) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Question Accordion Card (.exam-card, .q-accordion) */
+.exam-card,
+.q-accordion {
+  background: #FFFFFF !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 14px !important;
+  margin-bottom: 1.25rem !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 10px rgba(16, 27, 61, 0.04) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease !important;
+  position: relative !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.exam-card:hover,
+.q-accordion:hover {
+  border-color: #C5DCFD !important;
+  box-shadow: 0 8px 24px rgba(8, 117, 249, 0.08) !important;
+}
+
+.exam-card.open,
+.q-accordion.open {
+  border-color: #A3CAFD !important;
+  box-shadow: 0 10px 30px rgba(8, 117, 249, 0.1) !important;
+  border-left: 4.5px solid var(--primary-blue) !important;
+}
+
+/* Question Header Bar */
+.exam-card-header,
+.q-header {
+  padding: 1.2rem 1.5rem !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1.25rem !important;
+  background: #FFFFFF !important;
+  user-select: none !important;
+  transition: background 0.2s ease !important;
+  border-bottom: 1px solid transparent !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.exam-card-header:hover,
+.q-header:hover {
+  background: #F8FAFD !important;
+}
+
+.exam-card.open .exam-card-header,
+.q-accordion.open .q-header {
+  background: linear-gradient(180deg, #F8FAFD 0%, #FFFFFF 100%) !important;
+  border-bottom-color: var(--border-subtle) !important;
+}
+
+.exam-card-title,
+.q-title-area {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 1rem !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+/* Question Number Pill with Gradient */
+.q-num-badge,
+.exam-card-title .sidebar-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 44px !important;
+  height: 36px !important;
+  padding: 0 12px !important;
+  border-radius: 8px !important;
+  background: linear-gradient(135deg, #0875F9 0%, #064DB5 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 0.875rem !important;
+  letter-spacing: 0.02em !important;
+  box-shadow: 0 2px 8px rgba(8, 117, 249, 0.28) !important;
+  flex-shrink: 0 !important;
+}
+
+.q-title-text,
+.exam-card-title .q-title-text,
+.exam-card-title > span:last-child {
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: var(--navy-dark) !important;
+  line-height: 1.48 !important;
+  word-break: break-word !important;
+}
+
+.q-meta-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  margin-top: 0.5rem !important;
+  flex-wrap: wrap !important;
+}
+
+/* Badges */
+.badge-marks {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  background: #E8F7F2 !important;
+  color: #0E7B58 !important;
+  border: 1px solid #B8E8D8 !important;
+  font-weight: 800 !important;
+  border-radius: 20px !important;
+  padding: 3px 11px !important;
+  font-size: 0.75rem !important;
+}
+
+.badge-diff-easy {
+  display: inline-flex !important;
+  background: #ECFDF5 !important;
+  color: #047857 !important;
+  border: 1px solid #A7F3D0 !important;
+  font-weight: 700 !important;
+  border-radius: 20px !important;
+  padding: 3px 11px !important;
+  font-size: 0.75rem !important;
+}
+
+.badge-diff-medium {
+  display: inline-flex !important;
+  background: #FFFBEB !important;
+  color: #B45309 !important;
+  border: 1px solid #FDE68A !important;
+  font-weight: 700 !important;
+  border-radius: 20px !important;
+  padding: 3px 11px !important;
+  font-size: 0.75rem !important;
+}
+
+.badge-diff-hard {
+  display: inline-flex !important;
+  background: #FEF2F2 !important;
+  color: #B91C1C !important;
+  border: 1px solid #FECACA !important;
+  font-weight: 700 !important;
+  border-radius: 20px !important;
+  padding: 3px 11px !important;
+  font-size: 0.75rem !important;
+}
+
+.badge-type {
+  display: inline-flex !important;
+  background: #EEF2FF !important;
+  color: #4338CA !important;
+  border: 1px solid #C7D2FE !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+  padding: 3px 11px !important;
+  font-size: 0.75rem !important;
+}
+
+/* Actions in Header */
+.q-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  flex-shrink: 0 !important;
+}
+
+.btn-revised {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: var(--navy-dark) !important;
+  background: #F4F7FE !important;
+  border: 1px solid var(--border-subtle) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-revised:hover {
+  background: #EBF3FF !important;
+  border-color: #B8D3F9 !important;
+  color: var(--primary-blue) !important;
+}
+
+.btn-revised.active {
+  background: #16A36A !important;
+  border-color: #16A36A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 6px rgba(22, 163, 106, 0.25) !important;
+}
+
+.btn-save-q {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  color: var(--navy-dark) !important;
+  background: #F4F7FE !important;
+  border: 1px solid var(--border-subtle) !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.btn-save-q:hover {
+  background: #F3E8FF !important;
+  border-color: #DDD6FE !important;
+  color: var(--violet) !important;
+}
+
+.btn-save-q.active {
+  background: var(--violet) !important;
+  border-color: var(--violet) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 6px rgba(112, 82, 232, 0.25) !important;
+}
+
+.btn-copy-qa {
+  padding: 6px 10px !important;
+}
+
+.q-toggle-chevron {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  background: #F4F7FE !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-secondary) !important;
+  font-size: 0.7rem !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease !important;
+}
+
+.exam-card.open .q-toggle-chevron,
+.q-accordion.open .q-toggle-chevron {
+  transform: rotate(180deg) !important;
+  background: #EBF3FF !important;
+  color: var(--primary-blue) !important;
+  border-color: #B8D3F9 !important;
+}
+
+/* Accordion Body */
+.exam-card-body,
+.q-body {
   padding: 1.5rem !important;
-  border-top: 1px solid var(--border-subtle) !important;
   background: #FAFCFE !important;
+  border-top: 1px solid var(--border-subtle) !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ========================================================
+   THE 6 MODEL ANSWER SECTIONS (SEMANTIC COLOR CODING)
+   ======================================================== */
+.model-answer-section,
+.answer-section {
+  margin-bottom: 1.5rem !important;
+  position: relative !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.model-answer-section:last-child,
+.answer-section:last-child {
+  margin-bottom: 0 !important;
+}
+
+.answer-section-tag,
+.answer-subheading {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 5px 12px !important;
+  border-radius: 6px !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.75rem !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Section 1: Introduction (Blue) */
+.sec-intro .answer-section-tag,
+.answer-section:nth-of-type(1) .answer-subheading {
+  background: #EBF3FF !important;
+  color: #0875F9 !important;
+  border: 1px solid #C5DCFD !important;
+}
+
+.answer-intro-box,
+.answer-section:nth-of-type(1) > .prose {
+  background: linear-gradient(180deg, #F4F8FE 0%, #FAFCFF 100%) !important;
+  border: 1px solid #D6E6FE !important;
+  border-left: 4px solid #0875F9 !important;
+  border-radius: 10px !important;
+  padding: 1.25rem 1.4rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.68 !important;
+  color: var(--navy-dark) !important;
+  box-sizing: border-box !important;
+}
+
+/* Section 2: Technical Diagram & Architecture (Royal Violet) */
+.sec-diagram .answer-section-tag,
+.answer-section:nth-of-type(2) .answer-subheading {
+  background: #F3F0FF !important;
+  color: #6941C6 !important;
+  border: 1px solid #DCD5F9 !important;
+}
+
+.answer-diagram-card,
+.scientific-diagram-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E4E0FB !important;
+  border-left: 4px solid #7052E8 !important;
+  border-radius: 12px !important;
+  padding: 1.25rem 1.5rem !important;
+  box-shadow: 0 4px 16px rgba(112, 82, 232, 0.06) !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+}
+
+.diagram-wrapper {
+  background: #FFFFFF !important;
+  padding: 1rem !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  overflow-x: auto !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.diagram-wrapper svg {
+  max-width: 100% !important;
+  height: auto !important;
+  filter: drop-shadow(0 2px 8px rgba(16, 27, 61, 0.06)) !important;
+}
+
+.answer-diagram-caption,
+.diagram-caption {
+  text-align: center !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  color: var(--text-secondary) !important;
+  font-style: italic !important;
+  margin-top: 0.75rem !important;
+  padding-top: 0.5rem !important;
+  border-top: 1px dashed #E4E0FB !important;
+}
+
+/* Section 3: Detailed Theoretical Explanation (Teal / Cyan) */
+.sec-explanation .answer-section-tag,
+.answer-section:nth-of-type(3) .answer-subheading {
+  background: #E6FBF7 !important;
+  color: #007A6E !important;
+  border: 1px solid #99F2E2 !important;
+}
+
+.answer-section:nth-of-type(3) > .prose {
+  background: linear-gradient(180deg, #F0FDF9 0%, #FAFFFD 100%) !important;
+  border: 1px solid #CCFBF1 !important;
+  border-left: 4px solid #00A389 !important;
+  border-radius: 10px !important;
+  padding: 1.25rem 1.4rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.68 !important;
+  color: var(--navy-dark) !important;
+  box-sizing: border-box !important;
+}
+
+/* Section 4: Practical Code / Examples (Dark Editor / High Contrast) */
+.sec-examples .answer-section-tag,
+.answer-section:nth-of-type(4) .answer-subheading {
+  background: #EFF6FF !important;
+  color: #1D4ED8 !important;
+  border: 1px solid #BFDBFE !important;
+}
+
+.answer-example-box {
+  background: #0F172A !important;
+  color: #E2E8F0 !important;
+  border-radius: 10px !important;
+  padding: 1.25rem 1.4rem !important;
+  border-left: 4px solid #3B82F6 !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  overflow-x: auto !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15) !important;
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+}
+
+.answer-example-box p {
+  color: #E2E8F0 !important;
+  margin-bottom: 0.5rem !important;
+  font-family: var(--font-sans) !important;
+}
+
+.answer-example-box code,
+.answer-example-box pre {
+  color: #38BDF8 !important;
+  background: transparent !important;
+}
+
+/* Section 5: Five Core Revision Points (Emerald Green) */
+.sec-points .answer-section-tag,
+.answer-section:nth-of-type(5) .answer-subheading {
+  background: #DCFCE7 !important;
+  color: #15803D !important;
+  border: 1px solid #86EFAC !important;
+}
+
+.points-card {
+  background: linear-gradient(180deg, #F0FDF4 0%, #FAFFFA 100%) !important;
+  border: 1px solid #BBF7D0 !important;
+  border-left: 4px solid #16A36A !important;
+  border-radius: 12px !important;
+  padding: 1.25rem 1.5rem !important;
+  box-sizing: border-box !important;
+}
+
+.points-card ol {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  counter-reset: point-counter !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.85rem !important;
+}
+
+.points-card ol li {
+  counter-increment: point-counter !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.85rem !important;
+  font-size: 0.925rem !important;
+  line-height: 1.6 !important;
+  color: var(--navy-dark) !important;
+}
+
+.points-card ol li::before {
+  content: counter(point-counter) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  background: #16A36A !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 0.75rem !important;
+  flex-shrink: 0 !important;
+  margin-top: 2px !important;
+  box-shadow: 0 2px 4px rgba(22, 163, 106, 0.3) !important;
+}
+
+/* Section 6: University Exam Conclusion & Significance (Amber Gold) */
+.sec-conclusion .answer-section-tag,
+.answer-section:nth-of-type(6) .answer-subheading {
+  background: #FEF3C7 !important;
+  color: #B45309 !important;
+  border: 1px solid #FCD34D !important;
+}
+
+.answer-conclusion-box {
+  background: linear-gradient(180deg, #FFFBEB 0%, #FFFDF5 100%) !important;
+  border: 1px solid #FDE68A !important;
+  border-left: 4px solid #F59E0B !important;
+  border-radius: 10px !important;
+  padding: 1.25rem 1.4rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.68 !important;
+  color: #78350F !important;
+  box-sizing: border-box !important;
+}
+
+/* Responsive Question & Answer adjustments */
+@media (max-width: 768px) {
+  .exam-card-header,
+  .q-header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.85rem !important;
+    padding: 1rem 1.15rem !important;
+  }
+  .q-actions {
+    justify-content: flex-end !important;
+    width: 100% !important;
+    border-top: 1px dashed var(--border-subtle) !important;
+    padding-top: 0.6rem !important;
+  }
+  .exam-card-body,
+  .q-body {
+    padding: 1.15rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .questions-toolbar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 0.75rem 1rem !important;
+  }
+  .questions-search-box {
+    max-width: 100% !important;
+  }
+  .questions-actions-group {
+    justify-content: space-between !important;
+  }
+  .btn-qa-action {
+    padding: 5px 10px !important;
+    font-size: 0.75rem !important;
+  }
 }
 
 /* ========================================================
@@ -4651,14 +5239,24 @@ const App = {
       } else if (activeSubTab === 'practice') {
         // TAB 2: WRITTEN QUESTIONS (10 Questions Accordion)
         html += `
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; flex-wrap:wrap; gap:0.75rem;">
-            <div>
-              <h2 style="font-size:1.25rem; margin:0; color:var(--text-primary);">10 Model Questions &amp; Detailed Answers</h2>
-              <p style="font-size:0.85rem; color:var(--text-secondary); margin:0.25rem 0 0 0;">Each answer includes: Introduction, Concept Diagram, Detailed Explanation, 5 Points, and Conclusion.</p>
+          <div class="questions-toolbar">
+            <div class="questions-search-box">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" placeholder="Search module questions, diagrams, algorithms, or formulas..." oninput="App.filterQuestionList(this.value)">
             </div>
-            <div style="display:flex; align-items:center; gap:0.5rem; background:#FAFBFD; padding:0.5rem 1rem; border-radius:8px; border:1px solid var(--border);">
-              
-              <span style="font-size:0.85rem; font-weight:700; color:var(--text-primary);">Revision Progress: ${revisedCount} / 10 Revised</span>
+            <div class="questions-actions-group">
+              <span class="qa-stat-pill">
+                <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#16A36A;"></span>
+                Revision Progress: ${revisedCount} / 10 Revised
+              </span>
+              <button class="btn-qa-action" onclick="App.toggleAllAccordions(true)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                Expand All
+              </button>
+              <button class="btn-qa-action" onclick="App.toggleAllAccordions(false)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                Collapse All
+              </button>
             </div>
           </div>
 
@@ -4668,76 +5266,104 @@ const App = {
         modQuestions.forEach((q, idx) => {
           const isRevised = revisedList.includes(q.id);
           const isBookmarked = bookmarkedList.includes(q.id);
-          const diffClass = q.difficulty.toLowerCase();
+          const diffClass = (q.difficulty || 'medium').toLowerCase();
 
           html += `
             <div class="q-accordion ${idx === 0 ? 'open' : ''}" id="card_${q.id}">
               <div class="q-header" onclick="App.toggleAccordion(this)">
                 <div class="q-title-area">
                   <span class="q-num-badge">Q${q.q_no}</span>
-                  <div>
+                  <div style="flex:1; min-width:0;">
                     <div class="q-title-text">${q.question}</div>
                     <div class="q-meta-row">
-                      <span class="badge-marks">${q.marks} Marks</span>
+                      <span class="badge-marks">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        ${q.marks} Marks
+                      </span>
                       <span class="badge-diff-${diffClass}">${q.difficulty}</span>
                       <span class="badge-type">${q.type}</span>
                     </div>
                   </div>
                 </div>
                 <div class="q-actions">
-                  <button class="btn-revised ${isRevised ? 'active' : ''}" onclick="App.toggleQuestionRevised('${q.id}', event)">
-                    ${isRevised ? 'Revised' : 'Mark Revised'}
+                  <button class="btn-revised ${isRevised ? 'active' : ''}" onclick="App.toggleQuestionRevised('${q.id}', event)" title="Mark question as revised">
+                    ${isRevised ? '✓ Revised' : 'Mark Revised'}
                   </button>
-                  <button class="btn-revised ${isBookmarked ? 'active' : ''}" onclick="App.toggleQuestionBookmark('${q.id}', event)" title="Bookmark Question">
-                    ${isBookmarked ? 'Saved' : 'Save'}
+                  <button class="btn-save-q ${isBookmarked ? 'active' : ''}" onclick="App.toggleQuestionBookmark('${q.id}', event)" title="Save to bookmarks">
+                    ${isBookmarked ? '★ Saved' : '☆ Save'}
+                  </button>
+                  <button class="btn-qa-action btn-copy-qa" onclick="App.copyQuestionAnswer(this, event)" title="Copy full answer text">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy
                   </button>
                   <span class="q-toggle-chevron">▼</span>
                 </div>
               </div>
-              <div class="q-body">
+              <div class="q-body" style="${idx === 0 ? 'display:block;' : 'display:none;'}">
                 <!-- 1. Introduction & Academic Definition -->
-                <div class="model-answer-section">
-                  <span class="answer-section-tag">1. Introduction &amp; Definition</span>
+                <div class="model-answer-section sec-intro">
+                  <span class="answer-section-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    1. Introduction &amp; Formal Definition
+                  </span>
                   <div class="answer-intro-box">${q.introduction}</div>
                 </div>
 
                 <!-- 2. Concept Architecture & Flow Diagram -->
-                <div class="model-answer-section">
-                  <span class="answer-section-tag">2. Concept Diagram &amp; Architecture</span>
+                <div class="model-answer-section sec-diagram">
+                  <span class="answer-section-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                    2. Concept Diagram &amp; Architecture
+                  </span>
                   <div class="answer-diagram-card">
-                    <div class="diagram-wrapper">${q.diagram_svg}</div>
-                    <div class="answer-diagram-caption">${q.diagram_caption}</div>
+                    <div class="diagram-wrapper">${q.diagram_svg || ''}</div>
+                    <div class="answer-diagram-caption">${q.diagram_caption || ''}</div>
                   </div>
                 </div>
 
                 <!-- 3. In-Depth Detailed Explanation -->
-                <div class="model-answer-section">
-                  <span class="answer-section-tag">3. Detailed Academic Explanation</span>
-                  <div class="prose" style="font-size:0.95rem; line-height:1.65; color:var(--text-primary);">${q.detailed_explanation}</div>
+                <div class="model-answer-section sec-explanation">
+                  <span class="answer-section-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    3. Detailed Academic Explanation
+                  </span>
+                  <div class="prose" style="background:linear-gradient(180deg, #F0FDF9 0%, #FAFFFD 100%); border:1px solid #CCFBF1; border-left:4px solid #00A389; border-radius:10px; padding:1.25rem 1.4rem; font-size:0.95rem; line-height:1.68; color:var(--navy-dark);">${q.detailed_explanation}</div>
                 </div>
 
                 <!-- 4. Relevant Practical Example / Code / Worked Numerical -->
-                <div class="model-answer-section">
-                  <span class="answer-section-tag">4. Relevant Practical Example &amp; Demonstration</span>
+                <div class="model-answer-section sec-examples">
+                  <span class="answer-section-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    4. Relevant Practical Example &amp; Demonstration
+                  </span>
                   <div class="answer-example-box">${q.relevant_example || q.example || '<p>Comprehensive practical implementation demonstrating this concept.</p>'}</div>
                 </div>
 
                 <!-- 5. Five Important Examination Revision Points -->
-                <div class="model-answer-section">
-                  <span class="answer-section-tag">5. Five Important Examination Revision Points</span>
+                <div class="model-answer-section sec-points">
+                  <span class="answer-section-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    5. Five Important Examination Revision Points
+                  </span>
                   <div class="points-card">
                     <ol>
-                      ${q.five_points.map(pt => `<li>${pt.replace(/^[0-9]+\\.\\s*/, '')}</li>`).join('')}
+                      ${(q.five_points || []).map(pt => {
+                        if (typeof pt === 'object' && pt !== null) {
+                          return `<li><div><strong>${pt.heading || ''}:</strong> ${pt.content || ''}</div></li>`;
+                        }
+                        return `<li><div>${pt.replace(/^[0-9]+\.\s*/, '')}</div></li>`;
+                      }).join('')}
                     </ol>
                   </div>
                 </div>
 
                 <!-- 6. Academic Conclusion & University Exam Significance -->
-                <div class="model-answer-section">
-                  <span class="answer-section-tag">6. Academic Conclusion &amp; Exam Significance</span>
+                <div class="model-answer-section sec-conclusion">
+                  <span class="answer-section-tag">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    6. Academic Conclusion &amp; Exam Significance
+                  </span>
                   <div class="answer-conclusion-box">${q.conclusion}</div>
-                </div>
-              </div>
                 </div>
               </div>
             </div>
@@ -4791,10 +5417,62 @@ const App = {
     },
 
     toggleAccordion(headerEl) {
-      const accordion = headerEl.closest('.q-accordion');
+      const accordion = headerEl.closest('.q-accordion, .exam-card');
       if (accordion) {
         accordion.classList.toggle('open');
+        const body = accordion.querySelector('.q-body, .exam-card-body');
+        if (body) {
+          if (accordion.classList.contains('open')) {
+            body.style.display = 'block';
+          } else {
+            body.style.display = 'none';
+          }
+        }
       }
+    },
+
+    toggleAllAccordions(expand) {
+      const accordions = document.querySelectorAll('.q-accordion, .exam-card');
+      accordions.forEach(acc => {
+        const body = acc.querySelector('.q-body, .exam-card-body');
+        if (expand) {
+          acc.classList.add('open');
+          if (body) body.style.display = 'block';
+        } else {
+          acc.classList.remove('open');
+          if (body) body.style.display = 'none';
+        }
+      });
+    },
+
+    filterQuestionList(query) {
+      const q = (query || '').toLowerCase().trim();
+      const cards = document.querySelectorAll('.q-accordion, .exam-card');
+      cards.forEach(card => {
+        const title = card.querySelector('.q-title-text, .exam-card-title')?.innerText || '';
+        const body = card.querySelector('.q-body, .exam-card-body')?.innerText || '';
+        if (!q || title.toLowerCase().includes(q) || body.toLowerCase().includes(q)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    },
+
+    copyQuestionAnswer(btn, event) {
+      if (event) event.stopPropagation();
+      const card = btn.closest('.q-accordion, .exam-card');
+      if (!card) return;
+      const title = card.querySelector('.q-title-text, .exam-card-title')?.innerText || '';
+      const body = card.querySelector('.q-body, .exam-card-body')?.innerText || '';
+      const fullText = `${title}\n\n${body}`;
+      navigator.clipboard.writeText(fullText).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = `<span style="color:#16A36A; font-weight:700;">✓ Copied</span>`;
+        setTimeout(() => { btn.innerHTML = orig; }, 2000);
+      }).catch(() => {
+        btn.innerText = 'Copied!';
+      });
     },
 
     toggleQuestionRevised(id, event) {
@@ -5365,6 +6043,9 @@ const App = {
       const activeSubjectId = filterSubjectId || (subjects[0] ? subjects[0].id : 'BCAC501');
       const allExams = this.data.exams || [];
       const filteredExams = allExams.filter(q => q.subject_id === activeSubjectId);
+      const revisedList = Storage.getRevised();
+      const bookmarkedList = Storage.getBookmarks();
+      const activeSubject = subjects.find(s => s.id === activeSubjectId) || {};
 
       let html = `
         <div class="hero-card">
@@ -5414,69 +6095,134 @@ const App = {
           `).join('')}
         </div>
 
+        <div class="questions-toolbar">
+          <div class="questions-search-box">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" placeholder="Search model questions, diagrams, algorithms, or formulas..." oninput="App.filterQuestionList(this.value)">
+          </div>
+          <div class="questions-actions-group">
+            <span class="qa-stat-pill">
+              <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#16A36A;"></span>
+              10 Prescribed Model Solutions
+            </span>
+            <button class="btn-qa-action" onclick="App.toggleAllAccordions(true)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              Expand All
+            </button>
+            <button class="btn-qa-action" onclick="App.toggleAllAccordions(false)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+              Collapse All
+            </button>
+          </div>
+        </div>
+
         <div class="section-heading">
-          <h2>10 Prescribed Model Questions for ${activeSubjectId}</h2>
-          <p>Click any question below to inspect its diagram and detailed 5-point answer</p>
+          <h2>10 Prescribed Model Questions for ${activeSubject.name || activeSubjectId}</h2>
+          <p>Click any question below to inspect its diagram and detailed 6-part academic solution</p>
         </div>
       `;
 
       filteredExams.forEach((q, idx) => {
+        const isRevised = revisedList.includes(q.id);
+        const isBookmarked = bookmarkedList.includes(q.id);
+        const points = q.five_main_points || q.five_points || q.points || [];
+
         html += `
-          <div class="exam-card">
-            <div class="exam-card-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'">
+          <div class="exam-card ${idx === 0 ? 'open' : ''}" id="exam_${q.id}">
+            <div class="exam-card-header" onclick="App.toggleAccordion(this)">
               <div class="exam-card-title">
-                <span class="sidebar-badge" style="background:var(--lavender); color:var(--vibrant-blue); font-size:0.85rem;">Q${q.q_no}</span>
-                <span>${q.title}</span>
+                <span class="q-num-badge">Q${q.q_no}</span>
+                <div style="flex:1; min-width:0;">
+                  <div class="q-title-text">${q.title}</div>
+                  <div class="q-meta-row">
+                    <span class="badge-marks">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                      ${q.marks} Prescribed Marks
+                    </span>
+                    <span class="badge-diff-hard">University Standard</span>
+                    <span class="badge-type">6-Part Model Rubric</span>
+                  </div>
+                </div>
               </div>
-              <span class="tag-badge" style="background:#EAF7F1; color:#369B72;">[${q.marks} Marks]</span>
+              <div class="q-actions">
+                <button class="btn-revised ${isRevised ? 'active' : ''}" onclick="App.toggleQuestionRevised('${q.id}', event)" title="Mark solution as revised">
+                  ${isRevised ? '✓ Revised' : 'Mark Revised'}
+                </button>
+                <button class="btn-save-q ${isBookmarked ? 'active' : ''}" onclick="App.toggleQuestionBookmark('${q.id}', event)" title="Save to bookmarks">
+                  ${isBookmarked ? '★ Saved' : '☆ Save'}
+                </button>
+                <button class="btn-qa-action btn-copy-qa" onclick="App.copyQuestionAnswer(this, event)" title="Copy full answer text">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  Copy
+                </button>
+                <span class="q-toggle-chevron">▼</span>
+              </div>
             </div>
             <div class="exam-card-body" style="${idx === 0 ? 'display:block;' : 'display:none;'}">
               <!-- PART 1: INTRODUCTION -->
-              <div class="answer-section">
-                <div class="answer-subheading">1. Introduction &amp; Definition</div>
-                <div class="prose">${q.introduction}</div>
+              <div class="model-answer-section sec-intro">
+                <span class="answer-section-tag">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                  1. Introduction &amp; Core Definition
+                </span>
+                <div class="answer-intro-box">${q.introduction}</div>
               </div>
 
               <!-- PART 2: DIAGRAM -->
-              <div class="answer-section">
-                <div class="answer-subheading">2. Labeled Technical Diagram &amp; Architecture</div>
-                <div class="scientific-diagram-card">
+              <div class="model-answer-section sec-diagram">
+                <span class="answer-section-tag">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                  2. Labeled Technical Diagram &amp; Architecture
+                </span>
+                <div class="answer-diagram-card">
                   <div class="diagram-wrapper">${q.diagram_svg || ''}</div>
-                  <div class="diagram-caption">${q.diagram_caption || ''}</div>
-                  ${q.diagram_explanation ? `<div class="prose" style="margin-top:0.75rem;">${q.diagram_explanation}</div>` : ''}
+                  <div class="answer-diagram-caption">${q.diagram_caption || ''}</div>
+                  ${q.diagram_explanation ? `<div class="prose" style="margin-top:0.85rem; padding-top:0.85rem; border-top:1px dashed #E4E0FB; font-size:0.925rem; line-height:1.65; color:var(--navy-dark);">${q.diagram_explanation}</div>` : ''}
                 </div>
               </div>
 
               <!-- PART 3: DETAILED EXPLANATION -->
-              <div class="answer-section">
-                <div class="answer-subheading">3. Detailed Explanation &amp; Working Principles</div>
-                <div class="prose">${q.detailed_explanation || (q.diagram_explanation ? `<p>${q.diagram_explanation}</p>` : '')}</div>
+              <div class="model-answer-section sec-explanation">
+                <span class="answer-section-tag">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                  3. Detailed Explanation &amp; Working Principles
+                </span>
+                <div class="prose" style="background:linear-gradient(180deg, #F0FDF9 0%, #FAFFFD 100%); border:1px solid #CCFBF1; border-left:4px solid #00A389; border-radius:10px; padding:1.25rem 1.4rem; font-size:0.95rem; line-height:1.68; color:var(--navy-dark);">${q.detailed_explanation || (q.diagram_explanation ? `<p>${q.diagram_explanation}</p>` : '')}</div>
               </div>
 
               <!-- PART 4: RELEVANT PRACTICAL EXAMPLES -->
-              <div class="answer-section">
-                <div class="answer-subheading">4. Relevant Practical Example &amp; Demonstration</div>
+              <div class="model-answer-section sec-examples">
+                <span class="answer-section-tag">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                  4. Relevant Practical Example &amp; Code Demonstration
+                </span>
                 <div class="answer-example-box">${q.relevant_example || q.example || '<p>Comprehensive practical implementation demonstrating this concept.</p>'}</div>
               </div>
 
               <!-- PART 5: FIVE CORE POINTS -->
-              <div class="answer-section">
-                <div class="answer-subheading">5. Five Core Architectural Points</div>
+              <div class="model-answer-section sec-points">
+                <span class="answer-section-tag">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  5. Five Core Architectural Points
+                </span>
                 <div class="points-card">
                   <ol>
-                    ${(q.five_main_points || q.five_points || q.points || []).map(pt => {
+                    ${points.map(pt => {
                       if (typeof pt === 'object' && pt !== null) {
-                        return `<li><strong>${pt.heading || ''}:</strong> ${pt.content || ''}</li>`;
+                        return `<li><div><strong>${pt.heading || ''}:</strong> ${pt.content || ''}</div></li>`;
                       }
-                      return `<li>${pt.replace(/^[0-9]+\.\s*/, '')}</li>`;
+                      return `<li><div>${pt.replace(/^[0-9]+\.\s*/, '')}</div></li>`;
                     }).join('')}
                   </ol>
                 </div>
               </div>
 
               <!-- PART 6: CONCLUSION -->
-              <div class="answer-section">
-                <div class="answer-subheading">6. Conclusion &amp; Relevance</div>
+              <div class="model-answer-section sec-conclusion">
+                <span class="answer-section-tag">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                  6. Academic Conclusion &amp; University Exam Significance
+                </span>
                 <div class="answer-conclusion-box">${q.conclusion}</div>
               </div>
             </div>

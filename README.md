@@ -185,14 +185,27 @@ To eliminate superficial bullet points and shallow definitions, every one of the
 
 ---
 
-### 6-Part University Model Examination Answers
-The 290 module-level written questions and 40 university model examination solutions strictly adhere to the university grading rubrics:
-1. **Introduction & Academic Definition**: Comprehensive conceptual baseline (80–120 words).
-2. **Technical Diagram**: Structured ASCII architecture diagram or flowchart illustrating data/process flow.
-3. **Detailed Systematic Explanation**: Headings and sub-headings explaining the mechanics, taxonomy, and operational lifecycle.
-4. **Relevant Practical Example**: Concrete web development scenario, Java OOP program, or corporate finance balance sheet calculation.
-5. **5 Key Takeaway Points**: High-yield revision points summarizing the critical academic criteria.
-6. **Conclusion & University Exam Tips**: Guidance on mark allocation, pitfalls to avoid, and related concepts.
+### Enhanced Question & Answer UI/UX & 6-Part Color Architecture
+The 290 module-level written questions and 40 university model examination solutions feature a dedicated, high-contrast academic design system engineered for focus, readability, and efficient exam revision:
+
+- **Interactive Question Toolbar**: Real-time keyword filter search across questions, instant "Expand All" / "Collapse All" global controls, and live revision progress indicators.
+- **Card Hierarchy & Visual Polish**: Elevated white cards (`#FFFFFF`, rounded 14px, subtle border `#DCE5F2`, 4.5px active blue left-accent stripe when open, smooth hover elevation).
+- **Rich Header Badges**: Gradient squircle question number badges (`Q1`, `Q2`), high-contrast deep navy question titles, emerald marks badges, color-coded difficulty indicators (`Easy` / `Medium` / `Hard`), and type tags.
+- **One-Click Action Suite**: Integrated `✓ Mark Revised`, `★ Save to Bookmarks`, and instant `Copy Full Answer` buttons with clipboard confirmation toasts.
+- **Semantic 6-Part Color Architecture**:
+  1. 🔷 **Introduction & Formal Definition**: Primary blue header tag, soft blue gradient callout box with 4px blue border.
+  2. 🟣 **Technical Diagram & Architecture**: Royal violet header tag, white framed diagram canvas with SVG drop shadow and italic caption.
+  3. 📘 **Detailed Systematic Explanation**: Teal header tag, soft mint gradient container with 4px teal border and clear typographic hierarchy.
+  4. 💻 **Practical Implementation & Code**: Electric blue header tag, dark slate syntax editor (`#0F172A`) for high-contrast code readability.
+  5. ⭐ **5 Key Takeaway Points**: Emerald green header tag, soft green gradient container with vibrant numbered circle badges (1 to 5).
+  6. 🎓 **Conclusion & Exam Significance**: Warm amber gold header tag, golden border and callout highlighting university marking rubrics.
+
+![Enhanced Question & Answer Interface](docs/images/sankho_qa_module_practice.png)
+
+<div align="center">
+  <img src="docs/images/sankho_qa_diagram_explanation.png" alt="Color-Coded Technical Diagram and Academic Explanation" width="100%" />
+  <p><em>Semantic color-coded answer sections: Concept Diagrams, Detailed Academic Explanations, and Practical Code Blocks</em></p>
+</div>
 
 ---
 
