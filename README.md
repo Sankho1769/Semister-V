@@ -29,10 +29,14 @@ The central dashboard provides instantaneous syllabus navigation, resume-reading
 
 ---
 
-### 2. Modern Glassmorphic Hero Headers & Model Examination Suite
-Redesigned with two-column responsive glassmorphic layouts, ambient gradient backgrounds, and real-time metric counters that eliminate empty space and highlight crucial syllabus targets.
+### 2. Enterprise Academic Design System & Restrained Page Headers
+Engineered with an authoritative enterprise academic design system prioritizing long-duration study sessions (2+ hours without visual fatigue), purposeful typographic hierarchy, and zero generic "vibe-coded" AI decorations.
 
-![Model Examination Header Redesign](docs/images/hero_header_exams_1440.png)
+- **Eradication of Vibe-Coding**: Completely eliminated ambient glowing circles (`::before`/`::after` radial gradients), decorative gradient backgrounds, oversaturated badges, arbitrary emoji icons, and artificial card wrappers around paragraphs.
+- **Academic Palette**: Restrained neutral canvas (`#f8fafc`), clean white surfaces (`#ffffff`), subtle structural borders (`#e2e8f0`), high-contrast Slate typography (`#0f172a`), and subject-specific accent tokens (PHP `#0284c7`, Java `#b45309`, FM `#0f766e`, Entrepreneurship `#6d28d9`).
+- **Structured Academic Headers**: Compact breadcrumbs, university section metadata (`SECTION B • UNIVERSITY EXAMINATION PREPARATION`), crisp typography, and flat 1px-bordered statistics panels taking minimal vertical space (<100px) so study material is immediately accessible.
+
+![Academic Model Examination System](docs/images/academic_model_exams_1440.png)
 
 ---
 
@@ -64,13 +68,39 @@ Every concept is broken into a standalone granular lesson adhering to Bloom's Re
 
 ---
 
-### 7. Responsive Mobile & Tablet Experience
-Fully responsive across all screen widths down to 320px mobile viewports with zero horizontal scroll overflow, collapsible navigation drawer, and touch-friendly controls.
+---
+
+### 7. Structured Academic Subject & Module Catalog
+Clear hierarchical progression: **Subject → Module → Granular Lesson → Practice & Examination**. Allows effortless syllabus browsing with progress tracking and direct assessment entry points.
+
+![Subject Curriculum View](docs/images/academic_subject_1440.png)
+
+<br/>
+
+![Module Curriculum & Assessment View](docs/images/academic_module_1440.png)
+
+---
+
+### 8. Practical Laboratories Manual & Viva Voce
+Full implementation code with architectural flow diagrams, step-by-step algorithms, sample inputs/outputs, and comprehensive viva voce preparation across papers **BCAC591** and **BCAC592**. Features one-click copyable code blocks with parameter breakdowns.
+
+![Practical Laboratories Manual](docs/images/academic_practicals_1440.png)
+
+---
+
+### 9. Multi-Device Responsive Experience (Tablet & Mobile)
+Engineered for real-world devices across all 8 standard breakpoints (320px to 1920px). Features a dedicated mobile navigation drawer, fluid typography, zero horizontal scroll overflow, and touch-optimized action targets.
 
 <div align="center">
-  <img src="docs/images/academic_mobile_375.png" alt="Mobile Responsive Academic Dashboard" width="320" />
+  <img src="docs/images/academic_tablet_768.png" alt="Tablet Portrait Experience (768px)" width="720" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="docs/images/academic_mobile_375.png" alt="Mobile Responsive Dashboard (375px)" width="340" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="docs/images/academic_mobile_exams_375.png" alt="Mobile Responsive Model Exams" width="320" />
+  <img src="docs/images/academic_mobile_exams_375.png" alt="Mobile Model Examinations (375px)" width="340" />
 </div>
 
 ---
