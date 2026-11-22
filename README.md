@@ -11,7 +11,7 @@
 [![Assessment MCQs](https://img.shields.io/badge/Assessment%20MCQs-290%20(Dual--Mode)-teal.svg)](#dual-mode-module-mcq-assessment-engine)
 [![Practical Laboratories](https://img.shields.io/badge/Lab%20Case%20Studies-12%20Projects-green.svg)](#prescribed-practical-laboratories)
 [![Automated E2E Tests](https://img.shields.io/badge/E2E%20Regression%20Audit-54%2F54%20PASS%20(0%20Overflow)-brightgreen.svg)](#automated-system-audit--regression-testing)
-[![Architecture](https://img.shields.io/badge/Design%20System-Teal%20%26%20Navy%20Universal-0EAAA0.svg)](#technical-architecture--offline-capability)
+[![Architecture](https://img.shields.io/badge/Design%20System-Blue--Violet%20Academic%20Portal-0875F9.svg)](#technical-architecture--offline-capabilities)ility)
 
 ---
 
@@ -32,32 +32,31 @@ The central dashboard provides instantaneous syllabus navigation, resume-reading
 
 ---
 
-### 2. Universal Website Design System & Teal-Navy Visual Architecture
-Engineered in strict accordance with the **Universal Website Design System** specification, delivering a professional, institutional, and production-grade digital software product:
+### 2. Premium Blue-Violet Academic Design Architecture
+Engineered in strict accordance with the **Sankho Academic Design Specification** (Master Reference Theme), delivering a distinguished, institutional, and production-grade digital software product:
 
-- **Global Colour System Foundation**:
-  - **Primary Teal (`#0EAAA0`)**: Primary brand colour, active navigation indicators, key interactive elements, and focal highlights.
-  - **Deep Teal (`#006B64`)**: Dark accents, structural borders, emphasis, and layered concentric curves.
-  - **Dark Navy (`#14243A`)**: Institutional typography, prominent headings, and high-contrast text.
-  - **Cyan Teal (`#27C5BA`)**: Secondary highlights and subtle interactive states.
-  - **Pale Teal (`#E8F7F5`)**: Subtle card backgrounds, selected states, and pill badges.
-  - **Pure White (`#FFFFFF`)**: Primary content surfaces and card backgrounds.
-  - **Light Grey (`#F5F7F9`)**: Clean, distraction-free page canvas background.
-  - **Slate Grey (`#64748B`)**: Supporting body text and metadata descriptions.
-  - **Border Grey (`#DFE6EB`)**: Dividers, card borders, and structural separators.
-- **Subject-Specific Categorisation Accents**:
-  - `BCAC501 PHP with MySQL`: Primary Teal (`#0EAAA0`) with pale teal badge (`#E8F7F5`)
-  - `BCAC502 OOP with Java`: Royal Blue (`#2563EB`) with soft blue badge (`#EFF6FF`)
-  - `MIM501 Financial Management`: Emerald Green (`#10B981`) with soft emerald badge (`#ECFDF5`)
-  - `MIM502 Entrepreneurship`: Warm Amber (`#F59E0B`) with soft amber badge (`#FFFBEB`)
-- **Signature Circular Composition & Editorial Banner**:
-  - A signature circular composition on the left featuring concentric circular arcs in Primary Teal (`#0EAAA0`) and Deep Teal (`#006B64`), precision orbital tick marks, and framing the official Sankho academic emblem.
-  - Central area with bold Dark Navy title (`#14243A`), Primary Teal highlight (`#0EAAA0`), Slate Grey subtitle (`#64748B`), and quick action buttons.
-  - Right-side structured metrics sidebar with 4 clean metric tiles (Topics, Q&As, MCQs, Labs) with crisp icon boxes and dark navy numbers.
-  - Upper and lower architectural accent strips with horizontal colour strips and clean geometric cuts.
-  - Clean white surface canvas (`#FFFFFF`) with controlled pale-teal blocks.
-- **Standardized Inner Page Headers**:
-  - Crisp white surface cards (`#FFFFFF`) with subtle top-right ambient pale-teal glow (`rgba(14,170,160,0.06)`), soft border (`#DFE6EB`), rounded 14px corners, and pale-teal pill badges across all model exams, matrices, labs, cheatsheets, and assessment views.
+- **Master Palette Foundations**:
+  - **Primary Blue (`#0875F9`)**: Primary brand colour, active navigation indicators, key interactive elements, and focal buttons.
+  - **Deep Blue (`#064DB5`)**: Dark accents, structural depth, and gradient transitions.
+  - **Royal Violet (`#7052E8`)**: Secondary identity colour, Java curriculum theme, and rich gradient highlights.
+  - **Deep Navy (`#101B3D`)**: Institutional typography, prominent headings, and high-contrast text.
+  - **Page Background (`#F4F7FE`)**: Clean, distraction-free soft canvas background.
+  - **Pure White Surface (`#FFFFFF`)**: Primary content surfaces, card backgrounds, and metric cards.
+  - **Secondary Text (`#536680`)**: Supporting body text, subtitles, and metadata descriptions.
+  - **Border Subtle (`#DCE5F2`)**: Dividers, card borders, and structural separators.
+- **Subject-Specific Curriculum Accents**:
+  - `BCAC501 PHP with MySQL`: Primary Blue (`#0875F9`) with soft blue badge (`#EBF3FF`)
+  - `BCAC502 OOP with Java`: Royal Violet (`#7052E8`) with soft violet badge (`#F5F0FF`)
+  - `MIM501 Financial Management`: Emerald Green (`#16A36A`) with soft green badge (`#ECFDF5`)
+  - `MIM502 Entrepreneurship`: Warm Orange (`#F28A24`) with soft orange badge (`#FFF7ED`)
+- **Vibrant Blue-to-Violet Hero Banner & 3D Academic Artwork**:
+  - A hero centerpiece with rich gradient background (`linear-gradient(135deg, #0267F2 0%, #0875F9 45%, #6A4FF2 100%)`), subtle isometric wireframe cubes, and soft flowing curves.
+  - Translucent frosted-glass eyebrow pill: `SEMESTER V • CURRICULUM ARCHITECTURE`.
+  - Prominent title with warm gold accent: `Academic Learning & Examination Portal`.
+  - Academic 3D artwork composition featuring an angled metallic laptop with bright blue screen displaying a white graduation cap with golden-yellow tassel, a ceramic succulent planter, a 3-book textbook stack, and a standing checklist clipboard.
+  - Four embedded metric cards across the bottom: `192 Topics` (Blue), `290 Q&As` (Violet), `290 MCQs` (Green), and `12 Labs` (Orange).
+- **Standardized Inner Page Headers (Image 1 Style Reference)**:
+  - Clean white surface cards (`#FFFFFF`) with soft top-right radial blue aura (`rgba(8, 117, 249, 0.05)`), border (`#DCE5F2`), rounded 16px corners, and soft blue/violet pill badges across all model exams, matrices, labs, cheatsheets, and assessment views.
 
 ![Academic Model Examination System](docs/images/sankho_model_exams.png)
 
