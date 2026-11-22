@@ -107,10 +107,27 @@ Every concept is broken into a standalone granular lesson adhering to Bloom's Re
 
 ---
 
-### 6. Dual-Mode Module-Wise MCQ Assessment Engine
-10 rigorous multiple-choice questions for every single syllabus module (290 MCQs total). Features **Practice Mode** with instant explanations and distractor analysis, and **Assessment Mode** with a timed focus stepper, question palette, circular scorecard, and a **Targeted Mastery Retry Workflow** for missed questions.
+### 6. University MCQ Examination & Assessment Engine
+Engineered in accordance with the **Sankho Design System** (Primary Teal `#0EAAA0`, Deep Teal `#006B64`, Navy `#14243A`, Canvas `#F5F7F9`, Cards `#FFFFFF`, Borders `#DFE6EB`):
 
-![Module MCQ Assessment Engine](docs/images/academic_mcq_assessment_1440.png)
+- **Assessment Summary & Progress Bar**: Real-time summary showing Attempted Questions (e.g. `0 / 10`), Unanswered Remaining (`10`), Best Correct Score, Module Mastery %, and a smooth Teal progress bar.
+- **Component-Based Practice Mode**: Full-width interactive selection rows with custom radio indicators, difficulty badges, topic labels, bookmark control, and instant academic feedback panels.
+- **Timed University Examination Mode**: Live countdown timer (`⏱️ 15:00`), interactive 10-question navigator palette with real-time status legend (Answered, Flagged for Review, Remaining), and Previous/Next/Review navigation controls.
+- **Professional Examination Results**: Scorecard circle (`8/10`), accuracy %, time elapsed, topic-wise performance breakdown table, and a **Targeted Mastery Retry Workflow** for missed questions.
+
+![Sankho MCQ Practice Mode](docs/images/sankho_mcq_practice_mode.png)
+
+<div align="center">
+  <img src="docs/images/sankho_mcq_assessment_mode.png" alt="University Examination Assessment Stepper" width="100%" />
+  <p><em>Timed University Examination Mode featuring live countdown clock, question palette navigator, and Mark for Review controls</em></p>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="docs/images/sankho_mcq_results_page.png" alt="Examination Results and Performance Breakdown" width="100%" />
+  <p><em>Professional Results Page with circular scorecard, performance metrics, and topic-wise proficiency analysis</em></p>
+</div>
 
 ---
 
@@ -209,9 +226,13 @@ The 290 module-level written questions and 40 university model examination solut
 
 ---
 
-### Dual-Mode Module MCQ Assessment Engine
-- **Practice Mode**: Students practice at their own pace with instantaneous feedback, detailed explanations justifying the correct answer, and distractor analysis explaining why other options are incorrect.
-- **Assessment Mode**: Simulates real test conditions with a timer, linear question stepper, question palette (Answered, Unanswered, Current), and score calculation.
+### Dual-Mode University MCQ Examination Architecture
+The 290 module-level multiple choice questions adhere to university examination testing standards:
+- **Consistent Component-Based Interface**: Built on Sankho's institutional palette (Teal `#0EAAA0`, Deep Teal `#006B64`, Navy `#14243A`, Background `#F5F7F9`, Borders `#DFE6EB`).
+- **Interactive Full-Width Selection Rows**: Radio indicators, letter identifiers (`A`, `B`, `C`, `D`), clean text wrapping, and high-visibility selected/hover/focus/disabled/submitted states.
+- **Practice Mode**: Students practice at their own pace with instantaneous feedback, model explanations justifying the correct answer, and distractor analysis explaining why other options are incorrect.
+- **Assessment Mode**: Real university examination conditions with live countdown clock (`⏱️ 15:00`), 10-question palette navigator, and `Mark for Review` controls.
+- **Topic-Wise Performance Analytics**: Topic breakdown table highlighting proficiency ratios and identifying subject modules requiring reinforcement.
 - **Targeted Mastery Workflow**: Scoring below 10/10 dynamically exposes the **"Retry Incorrect Questions"** button, instantly spinning up a focused re-test containing only missed questions.
 
 ---
