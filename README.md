@@ -11,7 +11,7 @@
 [![Assessment MCQs](https://img.shields.io/badge/Assessment%20MCQs-290%20(Dual--Mode)-teal.svg)](#dual-mode-module-mcq-assessment-engine)
 [![Practical Laboratories](https://img.shields.io/badge/Lab%20Case%20Studies-12%20Projects-green.svg)](#prescribed-practical-laboratories)
 [![Automated E2E Tests](https://img.shields.io/badge/E2E%20Regression%20Audit-54%2F54%20PASS%20(0%20Overflow)-brightgreen.svg)](#automated-system-audit--regression-testing)
-[![Architecture](https://img.shields.io/badge/Architecture-Single--File%20Zero--Dependency-blueviolet.svg)](#technical-architecture--offline-capability)
+[![Architecture](https://img.shields.io/badge/Design%20System-Teal%20%26%20Navy%20Universal-0EAAA0.svg)](#technical-architecture--offline-capability)
 
 ---
 
@@ -32,17 +32,32 @@ The central dashboard provides instantaneous syllabus navigation, resume-reading
 
 ---
 
-### 2. Premium Blue-Violet Academic Visual Theme & Cohesive Design System
-Engineered with a cohesive academic visual identity featuring a blue-violet palette, crisp typography, and purposeful visual hierarchy inspired by professional educational software products:
+### 2. Universal Website Design System & Teal-Navy Visual Architecture
+Engineered in strict accordance with the **Universal Website Design System** specification, delivering a professional, institutional, and production-grade digital software product:
 
-- **Cohesive Academic Palette**: Primary Blue (`#0875F9`), Deep Blue (`#064DB5`), Royal Violet (`#7052E8`), Deep Navy Headings (`#101B3D`), Light Page Canvas (`#F4F7FE`), Crisp White Card Surfaces (`#FFFFFF`), Muted Slate Body (`#536680`), and Subtle Structural Borders (`#DCE5F2`).
-- **Subject-Specific Color Identifiers**:
-  - `BCAC501 PHP with MySQL`: Primary Blue (`#0875F9`) with pastel blue badge (`#EBF3FE`)
-  - `BCAC502 OOP with Java`: Royal Violet (`#7052E8`) with pastel violet badge (`#F3E8FF`)
-  - `MIM501 Financial Management`: Emerald Green (`#16A36A`) with pastel green badge (`#ECFDF5`)
-  - `MIM502 Entrepreneurship`: Warm Orange (`#F28A24`) with pastel orange badge (`#FFF7ED`)
-- **Centerpiece Gradient Hero**: A rich `linear-gradient(135deg, #0875F9 0%, #064DB5 45%, #7052E8 100%)` container with background isometric cube wireframe geometry, flowing wave overlay, warm golden accent on `Portal` (`#FFD043`), an integrated 3D academic workspace vector illustration, and 4 dynamically calculated metric panels.
-- **Inner Page Headers (Section Standard)**: Crisp white surface cards with subtle top-right radial glow (`rgba(8,117,249,0.06)`), soft border (`#DCE5F2`), rounded 16px corners, and light-blue pill badges (`SECTION B • UNIVERSITY EXAMINATION PREPARATION`) across all study and examination views.
+- **Global Colour System Foundation**:
+  - **Primary Teal (`#0EAAA0`)**: Primary brand colour, active navigation indicators, key interactive elements, and focal highlights.
+  - **Deep Teal (`#006B64`)**: Dark accents, structural borders, emphasis, and layered concentric curves.
+  - **Dark Navy (`#14243A`)**: Institutional typography, prominent headings, and high-contrast text.
+  - **Cyan Teal (`#27C5BA`)**: Secondary highlights and subtle interactive states.
+  - **Pale Teal (`#E8F7F5`)**: Subtle card backgrounds, selected states, and pill badges.
+  - **Pure White (`#FFFFFF`)**: Primary content surfaces and card backgrounds.
+  - **Light Grey (`#F5F7F9`)**: Clean, distraction-free page canvas background.
+  - **Slate Grey (`#64748B`)**: Supporting body text and metadata descriptions.
+  - **Border Grey (`#DFE6EB`)**: Dividers, card borders, and structural separators.
+- **Subject-Specific Categorisation Accents**:
+  - `BCAC501 PHP with MySQL`: Primary Teal (`#0EAAA0`) with pale teal badge (`#E8F7F5`)
+  - `BCAC502 OOP with Java`: Royal Blue (`#2563EB`) with soft blue badge (`#EFF6FF`)
+  - `MIM501 Financial Management`: Emerald Green (`#10B981`) with soft emerald badge (`#ECFDF5`)
+  - `MIM502 Entrepreneurship`: Warm Amber (`#F59E0B`) with soft amber badge (`#FFFBEB`)
+- **Signature Circular Composition & Editorial Banner**:
+  - A signature circular composition on the left featuring concentric circular arcs in Primary Teal (`#0EAAA0`) and Deep Teal (`#006B64`), precision orbital tick marks, and framing the official Sankho academic emblem.
+  - Central area with bold Dark Navy title (`#14243A`), Primary Teal highlight (`#0EAAA0`), Slate Grey subtitle (`#64748B`), and quick action buttons.
+  - Right-side structured metrics sidebar with 4 clean metric tiles (Topics, Q&As, MCQs, Labs) with crisp icon boxes and dark navy numbers.
+  - Upper and lower architectural accent strips with horizontal colour strips and clean geometric cuts.
+  - Clean white surface canvas (`#FFFFFF`) with controlled pale-teal blocks.
+- **Standardized Inner Page Headers**:
+  - Crisp white surface cards (`#FFFFFF`) with subtle top-right ambient pale-teal glow (`rgba(14,170,160,0.06)`), soft border (`#DFE6EB`), rounded 14px corners, and pale-teal pill badges across all model exams, matrices, labs, cheatsheets, and assessment views.
 
 ![Academic Model Examination System](docs/images/sankho_model_exams.png)
 
